@@ -44,7 +44,7 @@ const Contact = () => {
             className="p-4"
             href="/resume.pdf"
             target="_blank"
-            download="Dipali's Resume"
+            download={true}
             rel="noreferrer"
           >
             <span className="group-hover:rotate-90 duration-300">
