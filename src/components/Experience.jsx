@@ -97,7 +97,10 @@ const Experience = () => {
                 <div>
                   <a href={link} target="_blank">
                     <span className="group-hover:rotate-90 duration-300">
-                      <MdOutlineArrowCircleRight size={50} className="ml-1 mt-5" />
+                      <MdOutlineArrowCircleRight
+                        size={50}
+                        className="ml-1 mt-5"
+                      />
                     </span>
                   </a>
                 </div>

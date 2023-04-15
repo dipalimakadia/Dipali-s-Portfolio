@@ -25,7 +25,11 @@ const Home = () => {
         </div>
 
         <div className="flex flex-col justify-center ">
-          <img src={HeroImage} alt="my profile" className="rounded-2xl my-10 shadow-lg shadow-slate-400" />
+          <img
+            src={HeroImage}
+            alt="my profile"
+            className="rounded-2xl my-10 shadow-lg shadow-slate-400"
+          />
         </div>
       </div>
     </div>

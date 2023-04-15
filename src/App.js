@@ -9,28 +9,21 @@ import Education from "./components/Education";
 
 function App() {
   return (
-    
+    <div className="h-screen grid grid-cols-12">
+      <div className="h-full col-span-12">
+        <header className="sticky absolute top-0 left-0 right-0 col-span-12 z-30">
+          <NavBar />
+        </header>
 
-
-      <div className="h-screen grid grid-cols-12">
-
-        <div className="h-full col-span-12">
-          
-          <header className="sticky absolute top-0 left-0 right-0 col-span-12 z-30">
-              <NavBar/>
-          </header>
-
-          <Home />
-          <SocialLinks />
-          <About />
-          <Education />
-          <Experience />
-          <Technologies />
-          <Contact />
-
-        </div>
+        <Home />
+        <SocialLinks />
+        <About />
+        <Education />
+        <Experience />
+        <Technologies />
+        <Contact />
       </div>
-    
+    </div>
   );
 }
 

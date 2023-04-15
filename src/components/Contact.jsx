@@ -22,19 +22,33 @@ const Contact = () => {
           <p className="text-2xl py-5">Los Angeles, CA</p>
         </div>
         <div className="flex justify-center items-center">
-          <a className="p-4" href="https://www.linkedin.com/in/dipali-makadia/" target="_blank">
+          <a
+            className="p-4"
+            href="https://www.linkedin.com/in/dipali-makadia/"
+            target="_blank"
+          >
             <span className="group-hover:rotate-90 duration-300">
-            <FaLinkedin size={30}/>
+              <FaLinkedin size={30} />
             </span>
           </a>
-          <a className="p-4" href="https://github.com/dipalimakadia" target="_blank">
+          <a
+            className="p-4"
+            href="https://github.com/dipalimakadia"
+            target="_blank"
+          >
             <span className="group-hover:rotate-90 duration-300">
-            <FaGithub size={30} />
+              <FaGithub size={30} />
             </span>
           </a>
-          <a className="p-4" href="/resume.pdf" target="_blank" download="Dipali's Resume" rel="noreferrer">
+          <a
+            className="p-4"
+            href="/resume.pdf"
+            target="_blank"
+            download="Dipali's Resume"
+            rel="noreferrer"
+          >
             <span className="group-hover:rotate-90 duration-300">
-            <BsFillPersonLinesFill size={30} />
+              <BsFillPersonLinesFill size={30} />
             </span>
           </a>
         </div>
