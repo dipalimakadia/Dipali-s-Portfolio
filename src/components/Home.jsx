@@ -14,14 +14,14 @@ const Home = () => {
             I have more than 3 years of experience as a Developer. Pursuing MS
             in Computer Science at CSULA.
           </p>
-          <div>
+          {/* <div>
             <button className="group text-white w-fit px-6 py-3 my-2 flex items-center rounded-md bg-gradient-to-r from-cyan-300 to-blue-500 cursor-pointer">
               Portfolio
               <span className="group-hover:rotate-90 duration-300">
                 <MdOutlineKeyboardArrowRight size={25} className="ml-1" />
               </span>
             </button>
-          </div>
+          </div> */}
         </div>
 
         <div className="flex flex-col justify-center ">
