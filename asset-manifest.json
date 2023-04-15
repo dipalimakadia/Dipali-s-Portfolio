@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/Dipali-s-Portfolio/static/css/main.30765c67.css",
-    "main.js": "/Dipali-s-Portfolio/static/js/main.78902f66.js",
+    "main.js": "/Dipali-s-Portfolio/static/js/main.d890c098.js",
     "static/media/heroImage.jpg": "/Dipali-s-Portfolio/static/media/heroImage.a5b69e3ca0601fb59df2.jpg",
     "index.html": "/Dipali-s-Portfolio/index.html",
     "main.30765c67.css.map": "/Dipali-s-Portfolio/static/css/main.30765c67.css.map",
-    "main.78902f66.js.map": "/Dipali-s-Portfolio/static/js/main.78902f66.js.map"
+    "main.d890c098.js.map": "/Dipali-s-Portfolio/static/js/main.d890c098.js.map"
   },
   "entrypoints": [
     "static/css/main.30765c67.css",
-    "static/js/main.78902f66.js"
+    "static/js/main.d890c098.js"
   ]
 }
