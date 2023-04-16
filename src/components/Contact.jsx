@@ -42,7 +42,7 @@ const Contact = () => {
           </a>
           <a
             className="p-4"
-            href="/resume.pdf"
+            href="/Dipali_Makadia_Resume.pdf"
             target="_blank"
             download={true}
             rel="noreferrer"
