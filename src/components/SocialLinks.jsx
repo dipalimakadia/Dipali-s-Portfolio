@@ -1,6 +1,7 @@
 import React from "react";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { BsFillPersonLinesFill } from "react-icons/bs";
+import DipaliResume from '../components/Dipali_Makadia_Resume.pdf'
 
 const SocialLinks = () => {
   const links = [
@@ -30,7 +31,7 @@ const SocialLinks = () => {
           Resume <BsFillPersonLinesFill size={30} />
         </>
       ),
-      href: "/Dipali_Makadia_Resume.pdf",
+      href: {DipaliResume},
       style: "rounded-br-md",
       download: true,
     },
