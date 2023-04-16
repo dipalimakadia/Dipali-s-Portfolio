@@ -9,8 +9,6 @@ module.exports = {
       signature: ["Great Vibes"]
     }
   },
-  plugins: [
-    require('daisyui'),
-  ],
+  plugins: [],
 }
 

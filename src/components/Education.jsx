@@ -17,7 +17,7 @@ const Education = () => {
     {
       id: 3,
       uniname: "Gujarat Technological University",
-      degree: "B.Engin in Information Technology",
+      degree: "B.E. in Information Technology",
       GPA: "7.18/10",
     },
   ];
@@ -37,12 +37,12 @@ const Education = () => {
 
         <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-8 px-12 sm:px-0">
           {education.map(({ id, uniname, degree, GPA }) => (
-            <div key={id} className="shadow-md bg-slate-700 shadow-gray-500 rounded-lg">
+            <div key={id} className="shadow-md bg-slate-700 shadow-gray-500 px-5 rounded-lg">
               <div className='rounded-md font-bold text-white-500 duration-200 hover:scale-105 text-center py-4'>
                 {degree}
               </div>
               <div className="flex items-center justify-center">
-                <div className='rounded-md w-1/3 text-white-600 font-bold text-center'>
+                <div className='rounded-md w-1/2 text-white-600 font-bold text-center'>
                   University:
                 </div>
                 <div className='rounded-md w-1/2 text-white-600 duration-200 hover:scale-105 text-center'>
@@ -50,7 +50,7 @@ const Education = () => {
                 </div>
               </div>
               <div className="flex items-center justify-center py-2">
-                <div className="w-1/3 text-center text-white-600 font-bold">GPA:</div>
+                <div className="w-1/2 text-center text-white-600 font-bold">GPA:</div>
                 <div className="w-1/2 text-center text-white-600 duration-200 hover:scale-105">
                   {GPA}
                 </div>
