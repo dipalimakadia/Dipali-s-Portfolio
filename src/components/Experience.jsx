@@ -10,7 +10,7 @@ const Experience = () => {
       year: "03/2022 – present",
       place: "Los Angeles, US",
       details:
-        "I am working as a Thesis Reviewer at the Office of Graduate Studies at California State University, Angeles. My work is to review the thesis of the students. Mainly I check the format of the thesis which is in Microsoft word and pdf and email them the correction which they need to do. Meet students over zoom and review their thesis.",
+        "Conduct virtual meetings on Zoom to communicate with individual students and provide them with feedback. Review the students' theses, which are submitted in both MS Word and PDF formats, and give feedback via email. Offer guidance on referencing styles, citations, and bibliography, and assist in rectifying any formatting errors.",
       link: "https://www.calstatela.edu/",
     },
     {
@@ -20,7 +20,7 @@ const Experience = () => {
       year: "06/2022 – 08/2022",
       place: "Los Angeles, US",
       details:
-        "I worked as a Student Assistant with the Office of Graduate Studies for the summer. As a student assistant, various tasks are assigned to me like answering phone calls, and emails and also making flyers, spreadsheets, etc.",
+        "Managed incoming calls and emails, promptly addressing inquirie﻿s and effectively redirecting messages as required. Provided administrative support, research assistance, and updating departmental websites, social media platforms, designing promotional materials and maintaining databases for organizing and tracking departmental data.",
       link: "https://www.calstatela.edu/",
     },
     {
@@ -30,7 +30,7 @@ const Experience = () => {
       year: "05/2021 – 01/2022",
       place: "Pune, India",
       details:
-        "O2 Project -- O2 is a cognizant client and the project involves the development of the front end using HTML, CSS, Javascript, JQuery, GIT, and Adobe Target.",
+        "Collaborated with a team on the O2 project, utilizing HTML5, CSS, SCSS, JavaScript, JQuery, and Adobe Target to develop engaging and responsive front-end components. Implemented version control using GIT and integrated visual elements seamlessly in collaboration with the design team to optimize the user experience. Conducted thorough testing, collaborated with cross-functional teams, and followed industry best practices to ensure effective integration and functional code.",
       link: "https://www.cognizant.com/in/en",
     },
     {
@@ -40,7 +40,7 @@ const Experience = () => {
       year: "05/2019 – 05/2021",
       place: "Mumbai, India",
       details:
-        "DMI Project -- The project involves the development of graphs and frontend using HTML5, CSS3, Jquery, Highcharts, GIT, and Handlebars.",
+        "Worked on DMI project, utilizing HTML5, CSS3, Highcharts, D3, GIT, Handlebars, and ReactJS to develop visually appealing and interactive graphs and front-end components. Followed best practices in HTML and CSS for responsive designs and integrated Highcharts for data visualization capabilities. Implemented version control with GIT, utilized Handlebars for HTML components, conducted testing, and collaborated closely with designers and back-end developers to keep up the best quality of the project.",
       link: "https://www.digitas.com/en-us",
     },
     {
@@ -50,7 +50,7 @@ const Experience = () => {
       year: "06/2018 – 02/2019",
       place: "Mumbai, India",
       details:
-        "Smart Office Project -- The project involves a dashboard for Office. In which admin can log in and allow to register only those who have rights. It contains various modules like Add Employee, Manage Group, Manage Logs, and Access Rights. It also includes CRUD operations of employees. Technologies Used -ReactJs, Firebase, NodeJS, HTML, CSS, Bootstrap.",
+        "Lead the team on the Smart Office project to develop a secure and user-friendly dashboard for office management, utilizing ReactJS, Firebase, NodeJS, HTML5, CSS, and Bootstrap.Implemented user authentication and authorization features, created comprehensive modules for office management, and ensured efficient CRUD operations for employee data. Collaborated with the team on the Smart Home project to develop a secure and user-friendly dashboard for home management, utilizing AngularJS, Firebase, NodeJS, HTML5, and SCSS.",
       link: "",
     },
     {
@@ -60,7 +60,7 @@ const Experience = () => {
       year: "06/2022 – 08/2022",
       place: "Bangalore, India",
       details:
-        "Request Tracker Project -- The project involves tracking requests so that the current status of a particular request will be known. Technologies used - C#, HTML, CSS, SQL Server. This was my final year MTECH project & I had been part of this project during my internship.",
+        "Developed a Request Tracker project for my final year MTECH project and internship, utilizing C#, HTML, CSS, and SQL Server. Designed and implemented a system for tracking requests, featuring a user-friendly interface using HTML and CSS, and developed the back-end functionality in C#. Utilized SQL Server for efficient database management, conducted testing and collaborated with the project team and internship supervisor to refine specifications and implement necessary enhancements and bug fixes.",
       link: "https://www.textron.com/",
     },
   ];

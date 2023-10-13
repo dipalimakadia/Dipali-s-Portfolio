@@ -10,7 +10,7 @@ const About = () => {
           </p>
         </div>
         <p className="text-xl mt-5">
-          I have more than 3 years of work experience in Front End Development.
+          I have more than 6 years of work experience in Software Development.
           Extensive experience in HTML5, CSS, SCSS, Tailwind CSS, Bootstrap,
           Highcharts, D3.js, Handlebar, Grunt/Gulp, JavaScript, jQuery, Node,
           Nodemailer, JSON, Ajax, W3C Standards, NPM, React, JIRA, GitHub,
