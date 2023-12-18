@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/Dipali-s-Portfolio/static/css/main.1aca510a.css",
-    "main.js": "/Dipali-s-Portfolio/static/js/main.6641350e.js",
-    "static/media/Dipali_Makadia_Resume.pdf": "/Dipali-s-Portfolio/static/media/Dipali_Makadia_Resume.013b871584c922ca91af.pdf",
+    "main.js": "/Dipali-s-Portfolio/static/js/main.e3f6c707.js",
+    "static/media/Dipali_Makadia_Resume.pdf": "/Dipali-s-Portfolio/static/media/Dipali_Makadia_Resume.e0b521ba065b4955cc0b.pdf",
     "static/media/heroImage.jpg": "/Dipali-s-Portfolio/static/media/heroImage.a5b69e3ca0601fb59df2.jpg",
     "index.html": "/Dipali-s-Portfolio/index.html",
     "main.1aca510a.css.map": "/Dipali-s-Portfolio/static/css/main.1aca510a.css.map",
-    "main.6641350e.js.map": "/Dipali-s-Portfolio/static/js/main.6641350e.js.map"
+    "main.e3f6c707.js.map": "/Dipali-s-Portfolio/static/js/main.e3f6c707.js.map"
   },
   "entrypoints": [
     "static/css/main.1aca510a.css",
-    "static/js/main.6641350e.js"
+    "static/js/main.e3f6c707.js"
   ]
 }
