@@ -11,7 +11,7 @@ const Home = () => {
             I'm a FullStack Developer
           </h2>
           <p className="text-gray-500 py-4 max-w-md">
-          Experienced software developer with over 6 years of expertise in delivering exceptional software solutions, utilizingvarious development technologies and communicating with clients.
+          Experienced software developer with over 6 years of expertise in delivering exceptional software solutions, utilizing various development technologies and communicating with clients.
             {/* I have more than 6 years of experience as a Developer. Pursuing MS
             in Computer Science at CSULA. */}
           </p>
