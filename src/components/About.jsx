@@ -14,11 +14,11 @@ const About = () => {
           Extensive experience in HTML5, CSS, SCSS, Tailwind CSS, Bootstrap,
           Highcharts, D3.js, Handlebar, Grunt/Gulp, JavaScript, jQuery, Node,
           Nodemailer, JSON, Ajax, W3C Standards, NPM, React, JIRA, GitHub,
-          Visual Studio Code, Jupyter Notebook, Postman Responsive Web
+          Visual Studio Code, Jupyter Notebook, Postman, AWS, Accessibilities, Responsive Web
           Development. Have some knowledge and worked little in WordPress,
           Drupal, Google Cloud, Google Tag Manager, Adobe Targets, AWS,
           firebase, Photoshop, Mongodb, Rest APIs, Express.js, Vue.js,
-          Angular.js, Java, Python.
+          Angular.js, Java, Python, Google Analytics, Linux, ES6.
         </p>
 
         <br />

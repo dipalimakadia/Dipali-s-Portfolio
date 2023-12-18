@@ -5,7 +5,7 @@ const Education = () => {
     {
       id: 1,
       uniname: "California State University, Los Angeles",
-      degree: "M.Sc in Computer Science (Current)",
+      degree: "M.Sc in Computer Science",
       GPA: "3.84/4",
     },
     {
