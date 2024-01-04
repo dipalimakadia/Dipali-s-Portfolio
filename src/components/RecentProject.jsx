@@ -17,6 +17,11 @@ const Project = () => {
       projectname: "Task Management",
       description: "Engineered a dynamic web application utilizing cutting-edge technologies including VueJS, NodeJS, MongoDB, Express, HTML, and CSS. Implemented a robust task distribution system employing specialized user assignment logic. Tasks within a project were intelligently allocated to dedicated users, ensuring optimal resource utilization and streamlined project progress. Employed Postman for API testing and validation. Leveraged JSON for data interchange, facilitating smooth communication between frontend and backend components.",
     },
+    {
+      id: 4,
+      projectname: "Security Algorithms",
+      description: "Designed and implemented security algorithms, such as AES and DES, in C/C++ and Java as part of a college project, showcasing proficiency in cryptography and programming skills.",
+    },
   ];
 
   return (
@@ -29,7 +34,7 @@ const Project = () => {
           <p className="text-4xl font-bold inline border-b-4 border-gray-500">
             Recent Projects
           </p>
-          <p className="py-6 text-gray-500">Projects I worked on</p>
+          <p className="py-6 text-gray-500">Projects that I worked on</p>
         </div>
 
         <div className="">

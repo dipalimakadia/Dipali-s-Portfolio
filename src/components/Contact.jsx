@@ -1,7 +1,7 @@
 import React from "react";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { BsFillPersonLinesFill } from "react-icons/bs";
-import DipaliResume from '../components/Dipali_Makadia_Resume.pdf';
+import DipaliResume from '../components/DipaliMakadiaResume.pdf';
 
 const Contact = () => {
   return (
@@ -12,7 +12,7 @@ const Contact = () => {
             Contact
           </p>
           <p className="py-6 text-gray-500">
-            If you find my profile suitable, please feel free reach out to me.
+            If you find my profile suitable, please feel free to reach out me.
           </p>
         </div>
 
