@@ -13,7 +13,7 @@ const About = () => {
           With over 6 years of experience in software development, I specialize
           in both client and server-side work, delivering high-qualityproducts
           and maintaining effective written and verbal communication with
-          clients. Hands-on experience in implementingwebsite navigation layouts
+          clients. Hands-on experience in implementing website navigation layouts
           across various platforms and devices, with expertise in Responsive Web
           Development, W3C Standards& Cross Browser Compatibility. I have worked
           on Frontend, Backend, and Full Stack development tasks, showcasing
@@ -22,7 +22,7 @@ const About = () => {
           control,problem-solving, troubleshooting, and debugging. I work both
           independently and as a team player. I have a passion forcontinuous
           improvement in software engineering. Additionally, I have a solid
-          understanding of the software developmentlifecycle, including the
+          understanding of the software development life cycle, including the
           code, build, deploy, and testing phases.
         </p>
       </div>
