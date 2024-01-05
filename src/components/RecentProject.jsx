@@ -5,7 +5,7 @@ const Project = () => {
     {
       id: 1,
       projectname: "Restuarant Customer Chat, AI Chatbot",
-      description: "Built a robust query-based restaurant information retrieval app, using React, Python and FastAPI, ensuring seamless user interactions. Established a backend system that interfaces with the OpenAI API, extracting details from the restaurant's menu. Integrated Langchain which enhanced the app's ability to understand and respond to user queries effectively. Employed a version-controlled development workflow using Git and GitHub. Set up deployment on AWS services which optimized app performance and scalability.M.Sc in Computer Science (Current)",
+      description: "Built a robust query-based restaurant information retrieval app, using React, Python and FastAPI, ensuring seamless user interactions. Established a backend system that interfaces with the OpenAI API, extracting details from the restaurant's menu. Integrated Langchain which enhanced the app's ability to understand and respond to user queries effectively. Employed a version-controlled development workflow using Git and GitHub. Set up deployment on AWS services which optimized app performance and scalability.",
     },
     {
       id: 2,
