@@ -29,7 +29,7 @@ const Experience = () => {
       company: "Cognizant",
       year: "05/2021 – 01/2022",
       details:
-        "Worked on the O2 project, utilizing HTML5, CSS, SCSS, JIRA, NodeJS, ES6, JavaScript, JQuery, GIT, and Adobe Target to develop engaging and responsive front-end components. Worked with cross-functional teams and followed industry best practices to ensure effective integration and functional code.Reviewed and tested code for easily observable logic errors, and bugs, and ensured best practices were adhered to; standardized and optimized code as necessary. Stored code in a designated source control repository to assure the safety and recoverability of production and pre-release code.",
+        "Collaborated on the O2 project, utilizing HTML5, CSS, SCSS, JIRA, NodeJS, ES6, JavaScript, JQuery, GIT, and Adobe Target to develop engaging and responsive front-end components. Worked with cross-functional teams and followed industry standards for effective integration and functional code.",
       otherprojectdetails: "",
       link: "https://www.cognizant.com/in/en",
     },
@@ -39,28 +39,28 @@ const Experience = () => {
       company: "Digitas",
       year: "05/2019 – 05/2021",
       details:
-       "Worked on DMI project, utilizing HTML5, CSS3, Highcharts, D3, GIT, Handlebars, NPM, JavaScript, ES6, jQuery, Bootstrap, NodeJS, and ReactJS to develop visually appealing and interactive graphs and front-end components. Followed best practices for responsive designs and integrated Highcharts for data visualization capabilities. Implemented version control with GIT, utilized Handlebars for HTML components, built a single-page app containing a dashboard, graphs, roadmap, and calendars, conducted testing, and collaborated closely with designers and back-end developers to keep up the best quality of the project. Worked with cross-functional teams to ensure data integration and system efficiencies in terms of analytics, visualization, and reporting.",
+       "Programmed DMI website with team, using HTML5, CSS3, Highcharts, D3, GIT, Handlebars for HTML components, NPM, JavaScript, ES6, jQuery, Bootstrap, NodeJS, and ReactJS to develop visually appealing, interactive graphs and front-end components. Built a single-page app containing a dashboard, graphs, roadmap, and calendars, conducted testing, and involved closely with designers and back-end developers to keep up the best quality of the project. Followed best practices for responsive designs, standardized and optimized code as necessary, and integrated Highcharts for data visualization capabilities.",
       otherprojectdetails:
-        "Worked on Formula1 Project and have used Google Analytics and Jquery. Implemented tracking code, and set up data filters. Used Google Cloud and Nodejs for the research and new concepts.",
+        "Expanded Formula1 by implementing tracking code and set up data filters using Google Analytics and Jquery. Explored new concepts through research using Google Cloud and Nodejs.",
       link: "https://www.digitas.com/en-us",
     },
     {
       id: 4,
       position: "Senior Software Developer",
       company: "Motes & Bots Technologies",
-      year: "06/2018 – 02/2019",
+      year: "07/2018 – 02/2019",
       details:
-        "Lead the team on the Smart Office project to develop a secure and user-friendly dashboard for office management, utilizing ReactJS, Firebase, NodeJS, HTML5, CSS, Bootstrap, and AWS. Implemented user authentication and authorization features, created comprehensive modules for office management, and ensured efficient CRUD operations for employee data. Built and maintained highly scalable and secure web applications, services, and APIs",
-      otherprojectdetails: "Collaborated with the team on the Smart Home project to create a safe and easy-to-use dashboard for home management, using the latest technologies like Typescript, Angular, .NET, Web API, EF Core, and SQL Server. Created interfaces to interact with and manage databases. Created a/b testing, unit, regression, and end-to-end integration tests to ensure applications function according to requirements. Evaluated and developed a deeper understanding of new technologies, and owned the full lifecycle of implementation from proposal to deployment.",
+        "Led the team on the Smart Office Project to develop a secure and user-friendly website for office management, utilizing ReactJS, Firebase, NodeJS, HTML5, CSS, Bootstrap, and AWS. Features like user authentication and authorization was established, CRUD operations for employee data, and created modules for office management.",
+      otherprojectdetails: "Participated in Smart Home application to create a safe and easy-to-use dashboard for home management, using the latest technologies like Typescript, Angular, C#, and SQL Server. Then as per requirement migrated the Smart Home application using the latest technologies such as Angular, Firebase, NodeJS, HTML5, CSS, Bootstrap, and AWS. Created interfaces to interact with and manage databases. Gained knowledge of new technologies and implemented software development lifecycle, including the analysis, code, build, testing, and deployment.",
       link: "",
     },
     {
       id: 5,
       position: "Software Developer Intern",
       company: "Textron",
-      year: "06/2022 – 08/2022",
+      year: "07/2017 – 06/2018",
       details:
-        "Developed a Request Tracker project for my final year of MTECH and internship, utilizing C#, .NET Framework, HTML, CSS, and MYSQL. As a business requirement, I have implemented a system for tracking requests, featuring a user-friendly interface using HTML and CSS, and developed the back-end functionality in C#. Used SQL Server for efficient database management, conducted testing and collaborated with the project team and internship supervisor to refine specifications and implement necessary enhancements and bug fixes.",
+        "Contributed significantly to the team’s effort on the Request Tracker website using C#, .NET Framework, HTML, CSS, and SQL Server. As a business requirement, designed dashboard for tracking requests, CRUD operations, featuring a user-friendly interface using HTML and CSS, and back-end functionality in C#. Used SQL Server for efficient database management, conducted unit testing, and collaborated with the project team and bug fixes.",
       otherprojectdetails: "",
       link: "https://www.textron.com/",
     },

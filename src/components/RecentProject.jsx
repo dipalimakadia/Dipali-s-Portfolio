@@ -5,22 +5,22 @@ const Project = () => {
     {
       id: 1,
       projectname: "Restuarant Customer Chat, AI Chatbot",
-      description: "Built a robust query-based restaurant information retrieval app, using React, Python and FastAPI, ensuring seamless user interactions. Established a backend system that interfaces with the OpenAI API, extracting details from the restaurant's menu. Integrated Langchain which enhanced the app's ability to understand and respond to user queries effectively. Employed a version-controlled development workflow using Git and GitHub. Set up deployment on AWS services which optimized app performance and scalability.",
+      description: "Defined a query-based restaurant information retrieval app, using React, Python, and FastAPI, ensuring smooth user interactions and Git and GitHub as a Version-controlled tool. Established a backend system that interfaces with the OpenAI API, extracting details from the restaurant's menu. Integrated Langchain which has the app's ability to understand and respond to user queries effectively. Set up deployment on AWS services which optimized app performance and scalability.",
     },
     {
       id: 2,
       projectname: "Personal Portfolio Website",
-      description: "Designed and developed a personal website showcasing information which includes education, work experience, projects, skills, and contact details. Used ReactJS to implement dynamic elements, coupled with TailwindCSS for seamless styling and visual enhancements, resulting in an intuitive and user-friendly interface with interactive buttons and animations. Implemented version control and collaboration using Git and GitHub.",
+      description: "Designed and developed a personal website showing information that includes education, work experience, projects, skills, and contact details. ReactJS for dynamic elements, Tailwind CSS for styling, and GIT as a version control tool.",
     },
     {
       id: 3,
       projectname: "Task Management",
-      description: "Engineered a dynamic web application utilizing cutting-edge technologies including VueJS, NodeJS, MongoDB, Express, HTML, and CSS. Implemented a robust task distribution system employing specialized user assignment logic. Tasks within a project were intelligently allocated to dedicated users, ensuring optimal resource utilization and streamlined project progress. Employed Postman for API testing and validation. Leveraged JSON for data interchange, facilitating smooth communication between frontend and backend components.",
+      description: "A dynamic and user-friendly web application made using technologies including VueJS, JSON, NodeJS, MongoDB, Express, HTML, CSS and Postman for API testing and validation. In a task distribution system, users, employees, and projects are uniquely linked with each other.",
     },
     {
       id: 4,
       projectname: "Security Algorithms",
-      description: "Designed and implemented security algorithms, such as AES and DES, in C/C++ and Java as part of a college project, showcasing proficiency in cryptography and programming skills.",
+      description: "Generated security algorithms, such as RSA and DES, in C/C++ and Java as part of a college projects.",
     },
   ];
 

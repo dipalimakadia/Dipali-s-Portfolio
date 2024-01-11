@@ -1,7 +1,7 @@
 import React from "react";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { BsFillPersonLinesFill } from "react-icons/bs";
-import DipaliResume from "../components/DipaliMakadiaResume.pdf";
+import DipaliResume from "../components/Dipali_Makadia_Resume.pdf";
 
 const SocialLinks = () => {
   const links = [
