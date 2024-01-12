@@ -15,7 +15,7 @@ const Project = () => {
     {
       id: 3,
       projectname: "Task Management",
-      description: "A dynamic and user-friendly web application made using technologies including VueJS, JSON, NodeJS, MongoDB, Express, HTML, CSS and Postman for API testing and validation. In a task distribution system, users, employees, and projects are uniquely linked with each other.",
+      description: "Dynamic and user-friendly web application made using technologies including VueJS, JSON, NodeJS, MongoDB, Express, HTML, CSS and Postman for API testing and validation. In a task distribution system, users, employees, and projects are uniquely linked with each other.",
     },
     {
       id: 4,
