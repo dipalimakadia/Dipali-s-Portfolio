@@ -7,9 +7,9 @@ const Experience = () => {
       id: 1,
       position: "Graduate Student Assistant at Graduate Resoruce Center",
       company: "California State University, Los Angeles",
-      year: "03/2022 – present",
+      year: "03/2022 – 12/2023",
       details:
-        "Conduct virtual meetings on Zoom to communicate with individual students and provide them with feedback. Review the students' theses, which are submitted in both MS Word and PDF formats, and give feedback via email. Offer guidance on referencing styles, citations, and bibliography, and assist in rectifying any formatting errors.",
+        "Scheduled individual Zoom meetings with students to discuss their thesis formatting, including referencing styles, citations, and bibliographies.",
       otherprojectdetails: "",
       link: "https://www.calstatela.edu/",
     },
@@ -51,7 +51,7 @@ const Experience = () => {
       year: "07/2018 – 02/2019",
       details:
         "Led the team on the Smart Office Project to develop a secure and user-friendly website for office management, utilizing ReactJS, Firebase, NodeJS, HTML5, CSS, Bootstrap, and AWS. Features like user authentication and authorization was established, CRUD operations for employee data, and created modules for office management.",
-      otherprojectdetails: "Participated in Smart Home application to create a safe and easy-to-use dashboard for home management, using the latest technologies like Typescript, Angular, C#, and SQL Server. Then as per requirement migrated the Smart Home application using the latest technologies such as Angular, Firebase, NodeJS, HTML5, CSS, Bootstrap, and AWS. Created interfaces to interact with and manage databases. Gained knowledge of new technologies and implemented software development lifecycle, including the analysis, code, build, testing, and deployment.",
+      otherprojectdetails: "Participated in the Smart Home application to create a safe and easy-to-use dashboard for home management, using the latest technologies like Angular, Firebase, NodeJS, HTML5, CSS, Bootstrap, and AWS. Gained knowledge of new technologies and implemented software development lifecycle, including the analysis, coding, building, testing, and deployment.",
       link: "",
     },
     {
@@ -60,7 +60,7 @@ const Experience = () => {
       company: "Textron",
       year: "07/2017 – 06/2018",
       details:
-        "Contributed significantly to the team’s effort on the Request Tracker website using C#, .NET Framework, HTML, CSS, and SQL Server. As a business requirement, designed dashboard for tracking requests, CRUD operations, featuring a user-friendly interface using HTML and CSS, and back-end functionality in C#. Used SQL Server for efficient database management, conducted unit testing, and collaborated with the project team and bug fixes.",
+        "Contributed significantly to the team’s effort on the Request Tracker website using C#, .NET Framework, HTML, CSS, and SQL Server. As a business requirement, designed dashboard for tracking requests, CRUD operations, featuring a user-friendly interface using HTML and CSS, and back-end functionality in C#. Conducted testing, and collaborated with the project team and bug fixes.",
       otherprojectdetails: "",
       link: "https://www.textron.com/",
     },
