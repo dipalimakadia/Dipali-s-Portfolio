@@ -46,7 +46,7 @@ const Experience = () => {
     },
     {
       id: 4,
-      position: "Senior Software Developer",
+      position: "Software Developer",
       company: "Motes & Bots Technologies",
       year: "07/2018 – 02/2019",
       details:
