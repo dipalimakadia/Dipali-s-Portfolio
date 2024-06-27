@@ -5,6 +5,16 @@ const Experience = () => {
   const experiences = [
     {
       id: 1,
+      position: "Artificial Intelligence Intern",
+      company: "Radical AI",
+      year: "06/2024 – present",
+      details:
+        "Contribute to team efforts in creating 'Kai: The AI Teaching Assistant,' employing Python and TensorFlow for LLMs and RAG models and integrating OpenAI's API to advance natural language capabilities. Streamline data processing with PySpark, manage storage with MongoDB, and deploy Redis for caching, bolstering system responsiveness and supporting multimodal functionalities. Apply multimodal AI techniques, leveraging RNNs and CNNs to refine adaptive learning features, improving learner outcome predictions by over 20%.",
+      otherprojectdetails: "",
+      link: "https://lab.radicalai.app/",
+    },
+    {
+      id: 2,
       position: "Graduate Student Assistant at Graduate Resoruce Center",
       company: "California State University, Los Angeles",
       year: "03/2022 – 12/2023",
@@ -24,7 +34,7 @@ const Experience = () => {
     //   link: "https://www.calstatela.edu/",
     // },
     {
-      id: 2,
+      id: 3,
       position: "Programmer Analyst",
       company: "Cognizant",
       year: "05/2021 – 01/2022",
@@ -34,7 +44,7 @@ const Experience = () => {
       link: "https://www.cognizant.com/in/en",
     },
     {
-      id: 3,
+      id: 4,
       position: "Associate Interface Developer",
       company: "Digitas",
       year: "05/2019 – 05/2021",
@@ -45,7 +55,7 @@ const Experience = () => {
       link: "https://www.digitas.com/en-us",
     },
     {
-      id: 4,
+      id: 5,
       position: "Software Developer",
       company: "Motes & Bots Technologies",
       year: "07/2018 – 02/2019",
@@ -55,7 +65,7 @@ const Experience = () => {
       link: "",
     },
     {
-      id: 5,
+      id: 6,
       position: "Software Developer Intern",
       company: "Textron",
       year: "07/2017 – 06/2018",
