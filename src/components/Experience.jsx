@@ -9,7 +9,7 @@ const Experience = () => {
       company: "Radical AI",
       year: "06/2024 – present",
       details:
-        "Contributing to the development of 'Kai: The AI Teaching Assistant' by developing and deploying AI applications using industry-leading frameworks such as Google Gemini. Engaging in prompt engineering to refine interactions with AI models, ensuring clarity and relevance in responses. Utilizing technologies like Gemini AI and Vertex AI to enhance predictive features. FastAPI is used for the backend, and Git is employed for version control to support smooth team collaboration.",
+        "Contributing to the development of 'Kai: The AI Teaching Assistant' by developing and deploying AI applications using industry-leading frameworks such as Google Gemini. Engaging in prompt engineering to refine interactions with AI models, ensuring clarity and relevance in responses. Utilizing technologies like Gemini AI and Vertex AI to enhance predictive features. Using FastAPI, Python, Google Cloud for backend and Git for version control to support smooth team collaboration.",
       otherprojectdetails: "",
       link: "https://lab.radicalai.app/",
     },
