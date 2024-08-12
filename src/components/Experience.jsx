@@ -9,7 +9,7 @@ const Experience = () => {
       company: "Radical AI",
       year: "06/2024 – present",
       details:
-        "Contribute to team efforts in creating 'Kai: The AI Teaching Assistant,' employing Python and TensorFlow for LLMs and RAG models and integrating OpenAI's API to advance natural language capabilities. Streamline data processing with PySpark, manage storage with MongoDB, and deploy Redis for caching, bolstering system responsiveness and supporting multimodal functionalities. Apply multimodal AI techniques, leveraging RNNs and CNNs to refine adaptive learning features, improving learner outcome predictions by over 20%.",
+        "Contributing to the development of 'Kai: The AI Teaching Assistant' by developing and deploying AI applications using industry-leading frameworks such as Google Gemini. Engaging in prompt engineering to refine interactions with AI models, ensuring clarity and relevance in responses. Utilizing technologies like Gemini AI and Vertex AI to enhance predictive features. FastAPI is used for the backend, and Git is employed for version control to support smooth team collaboration.",
       otherprojectdetails: "",
       link: "https://lab.radicalai.app/",
     },
