@@ -11,7 +11,7 @@ const Home = () => {
             I'm a FullStack Developer
           </h2>
           <p className="text-gray-500 py-4 max-w-md">
-          With over more than 4 years of experience as Software Developer and I am passionate about Data Science, Artificial Intelligence, and Machine Learning, and I'm looking for entry-level or mid-level software engineering roles.
+          With over more than 4.5 years of experience as Software Developer and I am passionate about Software Development, Data Science, Artificial Intelligence, and Machine Learning, and I'm looking for entry-level or mid-level software engineering roles.
             {/* I have more than 6 years of experience as a Developer. Pursuing MS
             in Computer Science at CSULA. */}
           </p>

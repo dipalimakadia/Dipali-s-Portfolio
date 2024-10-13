@@ -9,7 +9,7 @@ const Experience = () => {
       company: "Radical AI",
       year: "06/2024 – present",
       details:
-        "Contributing to the development of 'Kai: The AI Teaching Assistant' by developing and deploying AI applications using industry-leading frameworks such as Google Gemini. Engaging in prompt engineering to refine interactions with AI models, ensuring clarity and relevance in responses. Utilizing technologies like Gemini AI and Vertex AI to enhance predictive features. Employing FastAPI, Python, Google Cloud for backend development and Git for version control to support smooth team collaboration.",
+        "Contributing to the development of 'Kai: The AI Teaching Assistant' by developing and deploying AI applications using industry-leading frameworks such as Google Gemini. Engaging in prompt engineering to refine interactions with AI models, ensuring clarity and relevance in responses. Utilizing technologies like Gemini AI and Vertex AI to enhance predictive features. Employing Docker, FastAPI, Python, Google Cloud for backend development and Git for version control to support smooth team collaboration.",
       otherprojectdetails: "",
       link: "https://lab.radicalai.app/",
     },
@@ -39,7 +39,7 @@ const Experience = () => {
       company: "Cognizant",
       year: "05/2021 – 01/2022",
       details:
-        "Collaborated on the O2 project, utilizing HTML5, CSS, SCSS, JIRA, NodeJS, ES6, JavaScript, JQuery, GIT, and Adobe Target to develop engaging and responsive front-end components. Worked with cross-functional teams and followed industry standards for effective integration and functional code.",
+        "Collaborated on the O2 project, utilizing HTML5, CSS, Bootstrap, JIRA, NodeJs, ES6, JavaScript, jQuery, Adobe Target, React, React Hooks, Redux, Axios and GIT to develop engaging and responsive website.",
       otherprojectdetails: "",
       link: "https://www.cognizant.com/in/en",
     },
@@ -49,7 +49,7 @@ const Experience = () => {
       company: "Digitas",
       year: "05/2019 – 05/2021",
       details:
-       "Programmed DMI website with team, using HTML5, CSS3, Highcharts, D3, GIT, Handlebars for HTML components, NPM, JavaScript, ES6, jQuery, Bootstrap, NodeJS, and ReactJS to develop visually appealing, interactive graphs and front-end components. Built a single-page app containing a dashboard, graphs, roadmap, and calendars, conducted testing, and involved closely with designers and back-end developers to keep up the best quality of the project. Followed best practices for responsive designs, standardized and optimized code as necessary, and integrated Highcharts for data visualization capabilities.",
+       "Programmed DMI website with team, using HTML5, CSS3, Highcharts, D3, GIT, Handlebars, NPM, JavaScript, ES6, jQuery, SCSS, ReactJS, React Hooks, Redux, Nodejs, Axios and AOS library to develop visually appealing and interactive graphs.",
       otherprojectdetails:
         "Expanded Formula1 by implementing tracking code and set up data filters using Google Analytics and Jquery. Explored new concepts through research using Google Cloud and Nodejs.",
       link: "https://www.digitas.com/en-us",
@@ -60,7 +60,7 @@ const Experience = () => {
       company: "Motes & Bots Technologies",
       year: "07/2018 – 02/2019",
       details:
-        "Led the team on the Smart Office Project to develop a secure and user-friendly website for office management, utilizing ReactJS, Firebase, NodeJS, HTML5, CSS, Bootstrap, and AWS. Features like user authentication and authorization was established, CRUD operations for employee data, and created modules for office management.",
+        "Led the team on the Smart Office Project to develop a secure and user-friendly website for office management, utilizing ReactJS, Redux Firebase, NodeJS, HTML5, CSS, Bootstrap, and AWS. Features like user authentication and authorization was established, CRUD operations for employee data, and created modules for office management.",
       otherprojectdetails: "Participated in the Smart Home application to create a safe and easy-to-use dashboard for home management, using the latest technologies like Angular, Firebase, NodeJS, HTML5, CSS, Bootstrap, and AWS. Gained knowledge of new technologies and implemented software development lifecycle, including the analysis, coding, building, testing, and deployment.",
       link: "",
     },
