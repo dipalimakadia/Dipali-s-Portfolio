@@ -16,7 +16,7 @@ const About = () => {
           focusing on Advanced Web Programming, Artificial Intelligence and Data
           Science. I have more than 4.5 years of experience as a Software
           Developer in Startup company as well as MNC. As a developer I worked on frontend, backend, and
-          full-stack development tasks, navigating layouts across various
+          full-stack tasks, navigating layouts across various
           platforms and devices, responsive web development, W3C standards,
           cross-browser compatibility, web accessibility, Agile and Scrum
           methodologies, problem-solving, troubleshooting, testing, debugging,
