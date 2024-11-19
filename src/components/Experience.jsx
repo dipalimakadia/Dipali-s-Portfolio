@@ -6,10 +6,10 @@ const Experience = () => {
     {
       id: 1,
       position: "Artificial Intelligence Intern",
-      company: "Radical AI",
+      company: "Reality AI Labs",
       year: "06/2024 – present",
       details:
-        "Contributing to the development of 'Kai: The AI Teaching Assistant' by developing and deploying AI applications using industry-leading frameworks such as Google Gemini. Engaging in prompt engineering to refine interactions with AI models, ensuring clarity and relevance in responses. Utilizing technologies like Gemini AI and Vertex AI to enhance predictive features. Employing Docker, FastAPI, Python, Google Cloud for backend development and Git for version control to support smooth team collaboration.",
+        "Contributing to the development of 'Kai Project' by developing and deploying AI applications using industry-leading frameworks such as Google Gemini. Engaging in prompt engineering to refine interactions with AI models, ensuring clarity and relevance in responses. Utilizing technologies like Gemini AI and Vertex AI to enhance predictive features. Employing Docker, Fast API, Python, Google Cloud for development and GIT for version control to support smooth collaboration.",
       otherprojectdetails: "",
       link: "https://lab.radicalai.app/",
     },
