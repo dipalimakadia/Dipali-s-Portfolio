@@ -8,10 +8,10 @@ const Home = () => {
       <div className="md:px-20 px-10 mx-auto flex flex-col items-center justify-center p-4 h-full md:flex-row">
         <div className="flex flex-col justify-center h-full">
           <h2 className="text-4xl md:text-6xl max-w-xl sm:text-6xl font-bold text-white">
-            I'm a FullStack Developer
+            I'm a Software Developer
           </h2>
           <p className="text-gray-500 py-4 max-w-md">
-          With over more than 4.5 years of experience as Software Developer and I am passionate about Software Development, Data Science, Artificial Intelligence, and Machine Learning, and I'm looking for entry-level or mid-level software engineering roles.
+          More than 4.5 years of experience as Software Developer and I am passionate about Software Development, Data Science, Artificial Intelligence, and Machine Learning, and I'm looking for entry-level or mid-level software engineering roles.
             {/* I have more than 6 years of experience as a Developer. Pursuing MS
             in Computer Science at CSULA. */}
           </p>
