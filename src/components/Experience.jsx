@@ -84,8 +84,7 @@ const Experience = () => {
             Experience
           </p>
           <p className="py-6 text-gray-500">
-            Places where I implemented my knowledge and learned new
-            Technologies.
+            Places where I implemented my knowledge and learned new Technologies.
           </p>
         </div>
 
