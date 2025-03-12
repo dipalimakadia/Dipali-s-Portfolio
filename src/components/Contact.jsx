@@ -19,8 +19,8 @@ const Contact = () => {
         <div className=" flex flex-col justify-center items-center">
           <p className="text-3xl py-5">Dipali Makadia</p>
           {/* <p className="text-2xl py-5">562-825-8686</p> */}
-          <p className="text-2xl py-5">dipali.makadia@gmail.com</p>
-          <p className="text-2xl py-5">Los Angeles, United States</p>
+          {/* <p className="text-2xl py-5">dipali.makadia@gmail.com</p> */}
+          <p className="text-2xl py-5">United States</p>
         </div>
         <div className="flex justify-center items-center">
           <a
