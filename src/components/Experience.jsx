@@ -5,16 +5,26 @@ const Experience = () => {
   const experiences = [
     {
       id: 1,
+      position: "Software Developer",
+      company: "Tesla",
+      year: "06/2025 – present",
+      details:
+        "Developed and maintained React Energy Product Profile (Tesla Account), a customer-facing portal for Tesla Energy customers to manage their solar panel, solar roof, and Powerwall orders. Built with React, Redux, Visx, Router, Tesla Design System, Axios, GIT and Testing Library.",
+      otherprojectdetails: "Built and enhanced Incentives UI, an internal administrative dashboard. Developed features for flat-rate incentives, battery/solar size–based incentives, and geographic filtering. Implemented secure ADFS OAuth authentication with JWT, React, Router, TypeScript, Node.js, Nodemon, and Express.js backend APIs. The tool directly supported customer pricing accuracy, compliance, and sales team efficiency.",
+      link: "https://www.tesla.com/",
+    },
+    {
+      id: 2,
       position: "Artificial Intelligence Intern",
       company: "Reality AI Labs",
-      year: "06/2024 – present",
+      year: "06/2024 – 05/2025",
       details:
         "Contributing to the development of 'Kai Project' by developing and deploying AI applications using industry-leading frameworks such as Google Gemini. Engaging in prompt engineering to refine interactions with AI models, ensuring clarity and relevance in responses. Utilizing technologies like Gemini AI and Vertex AI to enhance predictive features. Employing Docker, Fast API, Python, Google Cloud for development and GIT for version control to support smooth collaboration.",
       otherprojectdetails: "",
       link: "https://lab.radicalai.app/",
     },
     {
-      id: 2,
+      id: 3,
       position: "Graduate Student Assistant at Graduate Resoruce Center",
       company: "California State University, Los Angeles",
       year: "03/2022 – 12/2023",
@@ -23,18 +33,8 @@ const Experience = () => {
       otherprojectdetails: "",
       link: "https://www.calstatela.edu/",
     },
-    // {
-    //   id: 2,
-    //   position: "Student Assistant at Office of Graduate Studies",
-    //   company: "California State University, Los Angeles",
-    //   year: "06/2022 – 08/2022",
-    //   place: "Los Angeles, US",
-    //   details:
-    //     "Managed incoming calls and emails, promptly addressing inquirie﻿s and effectively redirecting messages as required. Provided administrative support, research assistance, and updating departmental websites, social media platforms, designing promotional materials and maintaining databases for organizing and tracking departmental data.",
-    //   link: "https://www.calstatela.edu/",
-    // },
     {
-      id: 3,
+      id: 4,
       position: "Programmer Analyst",
       company: "Cognizant",
       year: "05/2021 – 01/2022",
@@ -44,7 +44,7 @@ const Experience = () => {
       link: "https://www.cognizant.com/in/en",
     },
     {
-      id: 4,
+      id: 5,
       position: "Associate Interface Developer",
       company: "Digitas",
       year: "05/2019 – 05/2021",
@@ -55,7 +55,7 @@ const Experience = () => {
       link: "https://www.digitas.com/en-us",
     },
     {
-      id: 5,
+      id: 6,
       position: "Software Developer",
       company: "Motes & Bots Technologies",
       year: "07/2018 – 02/2019",
@@ -65,7 +65,7 @@ const Experience = () => {
       link: "",
     },
     {
-      id: 6,
+      id: 7,
       position: "Software Developer Intern",
       company: "Textron",
       year: "07/2017 – 06/2018",
