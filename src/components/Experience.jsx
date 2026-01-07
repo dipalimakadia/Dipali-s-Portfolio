@@ -25,7 +25,7 @@ const Experience = () => {
     },
     {
       id: 3,
-      position: "Graduate Student Assistant at Graduate Resoruce Center",
+      position: "Graduate Student Assistant at Graduate Resource Center",
       company: "California State University, Los Angeles",
       year: "03/2022 – 12/2023",
       details:
@@ -83,7 +83,7 @@ const Experience = () => {
           <p className="text-4xl font-bold inline border-b-4 border-gray-500">
             Experience
           </p>
-          <p className="py-6 text-gray-500">
+          <p className="py-6 text-gray-500 text-justify">
             Places where I implemented my knowledge and learned new Technologies.
           </p>
         </div>
@@ -103,8 +103,8 @@ const Experience = () => {
                 </div>
                 <div className="rounded-md text-sm text-white-400">{year}</div>
                 <div className="rounded-md text-sm text-white-400">{place}</div>
-                <div className="rounded-md text-white-600 pt-4">{details}</div>
-                <div className="rounded-md text-white-600 pt-4">{otherprojectdetails}</div>
+                <div className="rounded-md text-white-600 pt-4 text-justify">{details}</div>
+                <div className="rounded-md text-white-600 pt-4 text-justify">{otherprojectdetails}</div>
                 <div>
                   <a href={link} target="_blank">
                     <span className="group-hover:rotate-90 duration-300">

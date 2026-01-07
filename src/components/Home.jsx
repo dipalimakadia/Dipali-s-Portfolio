@@ -10,8 +10,8 @@ const Home = () => {
           <h2 className="text-4xl md:text-6xl max-w-xl sm:text-6xl font-bold text-white">
             I'm a Software Developer
           </h2>
-          <p className="text-gray-500 py-4 max-w-md">
-          More than 5 years of experience as Software Developer and I am passionate about Software Development, Data Science, Artificial Intelligence, and Machine Learning, and I'm looking for entry-level or mid-level software engineering roles.
+          <p className="text-gray-500 py-4 text-justify max-w-md">
+          More than 5 years of experience as Software Developer and I am passionate about Software Development, Data Science, Artificial Intelligence, and Machine Learning.
           </p>
           {/* <div>
             <button className="group text-white w-fit px-6 py-3 my-2 flex items-center rounded-md bg-gradient-to-r from-cyan-300 to-blue-500 cursor-pointer">

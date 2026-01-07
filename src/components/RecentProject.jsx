@@ -51,7 +51,7 @@ const Project = () => {
                 </div>
               </div>
               <div className="flex py-2">
-                <div className=" text-white-600">
+                <div className=" text-white-600 text-justify">
                   {description}
                 </div>
               </div>

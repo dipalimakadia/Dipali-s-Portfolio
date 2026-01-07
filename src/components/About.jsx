@@ -9,19 +9,19 @@ const About = () => {
             About
           </p>
         </div>
-        <p className="text-xl mt-5">
+        <p className="text-xl mt-5 text-justify">
           I have a strong foundation in computer science and a proven track
-          record of success. I recently graduated from California State
+          record of success. I graduated from California State
           University Los Angeles (CSULA) with a Master's in Computer Science,
           focusing on Advanced Web Programming, Artificial Intelligence and Data
-          Science. I have more than 4.5 years of experience as a Software
-          Developer in Startup company as well as MNC. As a developer I worked on frontend, backend, and
+          Science. I have more than 5 years of experience as a Software
+          Developer in Startup company as well as global tech. As a developer I worked on frontend, backend, and
           full-stack tasks, navigating layouts across various
           platforms and devices, responsive web development, W3C standards,
           cross-browser compatibility, web accessibility, Agile and Scrum
           methodologies, problem-solving, troubleshooting, testing, debugging,
           and version control. Good experience working in a team, leading a
-          Team, effective verbal communication, and providing a quality product
+          team, effective verbal communication, and providing a quality product
           to the client. I am eager to learn and grow.
         </p>
       </div>
