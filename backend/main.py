@@ -25,6 +25,13 @@ hf = OpenAI(
 class Question(BaseModel):
     question: str
 
+@app.get("/")
+def root():
+    return {"message": "Welcome to Dipali's Portfolio Backend! Visit /ask to interact with SparkaraNeo."}
+
+@app.get("/healthz")
+def health_check():
+    return {"status": "ok"}
 # Portfolio details
 PORTFOLIO_CONTENT = """
 Dipali's Portfolio
