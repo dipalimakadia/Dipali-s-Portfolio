@@ -7,6 +7,7 @@ import Experience from "./components/Experience";
 import Contact from "./components/Contact";
 import Education from "./components/Education";
 import Project from "./components/RecentProject";
+import Chatbot from "./components/Chatbot";
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
       <Project />
       <Technologies />
       <Contact />
+      <Chatbot />
     </div>
   );
 }
