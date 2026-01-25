@@ -121,7 +121,7 @@ export default function Chatbot() {
     try {
       const backendURL =
         process.env.NODE_ENV === "production"
-          ? "https://dipali-s-portfolios.onrender.com"
+          ? "https://dipali-s-portfolios.onrender.com/ask"
           : "http://localhost:5000/ask";
 
       const res = await axios.post(backendURL, { question: text });
