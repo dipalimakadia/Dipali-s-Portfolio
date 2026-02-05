@@ -123,7 +123,7 @@ export default function Chatbot() {
           ? "https://dipali-s-portfolios.onrender.com/ask"
           : "http://localhost:5000/ask";
 
-      const res = await axios.post(backendURL, { question: text }, { timeout: 30000 });
+      const res = await axios.post(backendURL, { question: text });
 
       if (res.data?.status === "offline") {
         setConnectionStatus("offline");
