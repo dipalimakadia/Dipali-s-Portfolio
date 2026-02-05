@@ -2,20 +2,6 @@ import { useState, useRef, useEffect } from "react";
 import axios from "axios";
 import { FaComments, FaTimes, FaPaperPlane, FaRobot } from "react-icons/fa";
 
-// Add this below your imports
-const localAnswers = {
-  about:
-    "👋 Hi! I’m Dipali, a software developer passionate about AI, Web, and Data Science!",
-  skills:
-    "🧰 Dipali works with React, Python, Node.js, Tailwind CSS, Firebase…",
-  projects:
-    "📂 Explore projects here: https://dipalimakadia.github.io/Dipali-s-Portfolio",
-  contact: "📧 Email: dipali.makadia@gmail.com\n📱 Phone: +1 562-825-8686",
-  linkedin: "[LinkedIn](https://www.linkedin.com/in/dipali-makadia/)",
-  github: "[GitHub](https://github.com/dipalimakadia)",
-  portfolio: "[Portfolio](https://dipalimakadia.github.io/Dipali-s-Portfolio)",
-};
-
 function renderMessage(content) {
   if (!content) return null;
 
@@ -93,12 +79,7 @@ export default function Chatbot() {
         hour: "2-digit",
         minute: "2-digit",
       }),
-    },
-    {
-    role: "bot",
-    content: "👋 Hi! If this is your first message, the server may take a moment to wake up…",
-    time: new Date().toLocaleTimeString([], { hour: "2-digit", minute: "2-digit" }),
-  }
+    }
   ]);
 
   const [input, setInput] = useState("");
@@ -117,21 +98,6 @@ export default function Chatbot() {
   useEffect(() => {
     messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
       }, [messages]);
-  //   if (messages.length === 1) {
-  //     setMessages((prev) => [
-  //       ...prev,
-  //       {
-  //         role: "bot",
-  //         content:
-  //           "👋 Hi! If this is your first message, the server may take a moment to wake up…",
-  //         time: new Date().toLocaleTimeString([], {
-  //           hour: "2-digit",
-  //           minute: "2-digit",
-  //         }),
-  //       },
-  //     ]);
-  //   }
-  // }, []);
 
   const sendMessage = async (text = input) => {
     if (!text.trim()) return;
@@ -149,23 +115,6 @@ export default function Chatbot() {
     ]);
 
     setInput("");
-    // const lower = text.toLowerCase();
-    // for (const key in localAnswers) {
-    //   if (lower.includes(key)) {
-    //     setMessages((prev) => [
-    //       ...prev,
-    //       {
-    //         role: "bot",
-    //         content: localAnswers[key],
-    //         time: new Date().toLocaleTimeString([], {
-    //           hour: "2-digit",
-    //           minute: "2-digit",
-    //         }),
-    //       },
-    //     ]);
-    //     return;
-    //   }
-    // }
     setLoading(true);
 
     try {
