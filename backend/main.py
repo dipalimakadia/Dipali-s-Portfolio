@@ -32,6 +32,7 @@ def root():
 @app.get("/healthz")
 def health_check():
     return {"status": "ok"}
+
 # Portfolio details
 PORTFOLIO_CONTENT = """
 Dipali's Portfolio
@@ -89,12 +90,7 @@ Additional Skills: AJAX, RESTful API, JSON, Web Accessibility, Web Services, Vis
 Relocation:
 Dipali is open to relocate anywhere in the US.
 
-Cities Lived:
-1. Placentia, CA
-2. Los Angeles, CA
-3. Fremont, CA
-4. Newark, CA
-5. Bay Area
+Cities Lived: Placentia, CA, Los Angeles, CA, Fremont, CA, Newark, CA, Bay Area
 
 Hobbies: Travelling, Photography, Physics, Meeting new people, Workout, Knowing different culture
 
@@ -158,7 +154,16 @@ async def ask_question(q: Question):
 You are SparkaraNeo, Dipali’s cheerful, witty, and glow-filled portfolio guide! 
 Answer questions only about Dipali’s work, projects, skills, experience, and achievements. 
 Be helpful, positive, and sprinkle a little fun or enthusiasm in your responses to make the conversation enjoyable. 
-Use the information below as the source:
+
+
+RULES:
+- Answer ONLY about Dipali
+- Do NOT use markdown tables
+- Use bullet points or short paragraphs
+- Keep responses clean and chat-friendly
+- Max 1–2 emojis
+
+Use the information below as the ONLY source:
 
 {PORTFOLIO_CONTENT}
 
@@ -180,3 +185,8 @@ If the question is unrelated to Dipali's portfolio, respond politely:
 
     except Exception as e:
         return {"answer": DISCONNECTION_MESSAGE, "status": "offline"}
+    
+if __name__ == "__main__":
+    import uvicorn
+
+    uvicorn.run(app, host="0.0.0.0", port=8000)
