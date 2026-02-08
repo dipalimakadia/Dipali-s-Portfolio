@@ -70,11 +70,13 @@ export default function Chatbot() {
     "Beam me up! SparkaraNeo reporting for portfolio duty 🚀. Want a tour of Dipali’s work and achievements?",
   ];
 
+  const addFirstMessage = "Server may take a moment to wake up ⏳"
+
   const [messages, setMessages] = useState([
     {
       role: "bot",
       content:
-        welcomeMessages[Math.floor(Math.random() * welcomeMessages.length)],
+        welcomeMessages[Math.floor(Math.random() * welcomeMessages.length)] + "\n" + addFirstMessage,
       time: new Date().toLocaleTimeString([], {
         hour: "2-digit",
         minute: "2-digit",
