@@ -1,0 +1,7 @@
+name = "sparkaraneo"
+main = "index.js"
+compatibility_date = "2025-01-01"
+
+# Free Workers AI binding (no API key needed)
+[ai]
+binding = "AI"
