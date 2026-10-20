@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 
 // Swatches show the light-theme colour of each accent.
 export const ACCENTS = [
-  { id: "rose", label: "Rose", color: "#b0305f" },
+  { id: "slate", label: "Slate", color: "#334155" },
   { id: "forest", label: "Forest", color: "#2f6f5e" },
   { id: "plum", label: "Plum", color: "#8c3a73" },
   { id: "graphite", label: "Graphite", color: "#1c1915" },
@@ -14,7 +14,7 @@ const apply = (id) => {
 };
 
 const AccentPicker = ({ className = "" }) => {
-  const [current, setCurrent] = useState(() => localStorage.getItem("accent") || "rose");
+  const [current, setCurrent] = useState(() => localStorage.getItem("accent") || "slate");
 
   useEffect(() => {
     apply(current);

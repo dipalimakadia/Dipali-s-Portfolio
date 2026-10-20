@@ -11,7 +11,7 @@ const ALLOWED_ORIGINS = [
   "http://localhost:3000",
 ];
 const MAX_QUESTION_LENGTH = 600;
-const MODEL = "@cf/meta/llama-3.1-8b-instruct";
+const MODEL = "@cf/meta/llama-3.1-8b-instruct-fp8";
 
 const NAME_KEYWORDS = ["sparkaraneo", "your name", "meaning of your name", "who are you", "why your name"];
 const NAME_ANSWER =
@@ -116,7 +116,8 @@ export default {
       const answer = await askModel(question, env);
       if (!answer) return json(request, { answer: OFFLINE_MESSAGE, status: "offline" });
       return json(request, { answer, status: "online" });
-    } catch {
+    } catch (err) {
+      console.error("Workers AI error:", err?.message || err);
       return json(request, { answer: DISCONNECTION_MESSAGE, status: "offline" });
     }
   },
