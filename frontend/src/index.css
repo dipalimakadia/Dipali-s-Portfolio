@@ -26,11 +26,13 @@ html.dark {
   --muted: #a29a8b;
   --border: rgba(243, 238, 228, 0.14);
   --sage: #9dbb86;
-  --accent: #f08ab0;
-  --on-accent: #2a0d19;
+  --accent: #94a3b8; /* slate-400: #334155 is too dark to read on the charcoal background */
+  --on-accent: #0f172a;
 }
 
 /* Visitor-selectable accent colours (set via data-accent on <html>) */
+html[data-accent="slate"]       { --accent: #334155; --on-accent: #fff; --accent-bright: #94a3b8; }
+html.dark[data-accent="slate"]  { --accent: #94a3b8; --on-accent: #0f172a; }
 html[data-accent="forest"]      { --accent: #2f6f5e; --on-accent: #fff; --accent-bright: #7fd1b0; }
 html.dark[data-accent="forest"] { --accent: #7fd1b0; --on-accent: #0d1a14; }
 html[data-accent="plum"]        { --accent: #8c3a73; --on-accent: #fff; --accent-bright: #e39ac8; }

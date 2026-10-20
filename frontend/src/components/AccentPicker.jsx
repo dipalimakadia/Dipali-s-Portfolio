@@ -14,7 +14,10 @@ const apply = (id) => {
 };
 
 const AccentPicker = ({ className = "" }) => {
-  const [current, setCurrent] = useState(() => localStorage.getItem("accent") || "slate");
+  const [current, setCurrent] = useState(() => {
+    const saved = localStorage.getItem("accent");
+    return ACCENTS.some((a) => a.id === saved) ? saved : "slate";
+  });
 
   useEffect(() => {
     apply(current);

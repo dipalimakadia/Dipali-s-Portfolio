@@ -2,15 +2,29 @@ import { useState, useRef, useEffect } from "react";
 import axios from "axios";
 import { FaComments, FaTimes, FaPaperPlane, FaRobot } from "react-icons/fa";
 
+const escapeHtml = (t) =>
+  t.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
+
+// Markdown links, bare URLs, domains (linkedin.com/github.com/www.), emails and phone numbers all become clickable.
+const LINK_RE =
+  /\[([^\]]+)\]\((https?:\/\/[^\s)]+)\)|(https?:\/\/[^\s<>()]*[^\s<>().,;:!?])|([\w.+-]+@[\w-]+(?:\.[\w-]+)*\.[A-Za-z]{2,})|((?:www\.|linkedin\.com|github\.com)[^\s<>()]*[^\s<>().,;:!?])|(\+?\d[\d\s().-]{8,}\d)/g;
+
+const anchor = (href, label, external = true) =>
+  `<a href="${href}"${external ? ' target="_blank" rel="noopener noreferrer"' : ""} class="underline break-all" style="color:var(--accent)">${label}</a>`;
+
 function renderMessage(content) {
   if (!content) return null;
 
   const format = (text) =>
-    text
-      .replace(
-        /\[([^\]]+)\]\((https?:\/\/[^\s)]+)\)/g,
-        `<a href="$2" target="_blank" rel="noopener noreferrer" class="underline" style="color:var(--accent)">$1</a>`,
-      )
+    escapeHtml(text)
+      .replace(LINK_RE, (m, mdLabel, mdUrl, url, email, domain, phone) => {
+        if (mdUrl) return anchor(mdUrl, mdLabel);
+        if (url) return anchor(url, url);
+        if (email) return anchor(`mailto:${email}`, email, false);
+        if (domain) return anchor(`https://${domain}`, domain);
+        const digits = phone.replace(/[^\d+]/g, "");
+        return digits.length >= 10 ? anchor(`tel:${digits}`, phone, false) : m;
+      })
       .replace(/\*\*(.*?)\*\*/g, "<strong>$1</strong>")
       .replace(/\*(.*?)\*/g, "<em>$1</em>");
 
@@ -61,6 +75,9 @@ function addEmojiToAnswer(answer) {
 }
 
 
+const CONTACT_ANSWER =
+  "Phone: +1 562-825-8686\nEmail: dipali.makadia@gmail.com\n[LinkedIn](https://www.linkedin.com/in/dipali-makadia/)\n[GitHub](https://github.com/dipalimakadia)";
+
 // Used when the AI server cannot be reached, so the basics still work.
 function localAnswer(q) {
   const t = q.toLowerCase();
@@ -68,7 +85,7 @@ function localAnswer(q) {
   if (t.includes("github")) return "[GitHub](https://github.com/dipalimakadia)";
   if (t.includes("relocat")) return "Dipali is open to relocate anywhere in the US.";
   if (t.includes("contact") || t.includes("reach"))
-    return "Phone: 562-825-8686\n[LinkedIn](https://www.linkedin.com/in/dipali-makadia/)\n[GitHub](https://github.com/dipalimakadia)";
+    return CONTACT_ANSWER;
   if (t.includes("skill") || t.includes("tech"))
     return "Dipali works mostly with React, Redux, TypeScript, Node.js, Python, FastAPI, AWS and Google Cloud, plus Gemini/LLM tooling. See the Technologies section above!";
   return "My AI brain is resting right now 😴. Meanwhile, explore the sections above, press **Ctrl+K**, or reach Dipali on [LinkedIn](https://www.linkedin.com/in/dipali-makadia/).";
