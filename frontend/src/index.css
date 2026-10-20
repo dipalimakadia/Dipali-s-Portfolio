@@ -1,13 +1,122 @@
-@import url('https://fonts.googleapis.com/css2?family=Gentium+Plus:ital,wght@0,400;1,400;1,700&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,300;0,400;0,500;1,700&display=swap');
-
-@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..700;1,9..144,400..700&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&family=Great+Vibes&display=swap');
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
+/* ---------- Theme tokens: warm paper (default) and warm charcoal ---------- */
+:root {
+  --bg: #f4efe6;
+  --bg-soft: #ebe5d8;
+  --surface: #fbf8f2;
+  --fg: #1c1915;
+  --muted: #6f675a;
+  --border: rgba(28, 25, 21, 0.14);
+  --sage: #5e7f5b;
+  /* accent (default: rose) */
+  --accent: #b0305f;
+  --on-accent: #ffffff;
+  --accent-bright: #f29ab9; /* used on always-dark surfaces such as the terminal */
+}
+html.dark {
+  --bg: #151310;
+  --bg-soft: #1d1a16;
+  --surface: #1f1c18;
+  --fg: #f3eee4;
+  --muted: #a29a8b;
+  --border: rgba(243, 238, 228, 0.14);
+  --sage: #9dbb86;
+  --accent: #f08ab0;
+  --on-accent: #2a0d19;
+}
+
+/* Visitor-selectable accent colours (set via data-accent on <html>) */
+html[data-accent="forest"]      { --accent: #2f6f5e; --on-accent: #fff; --accent-bright: #7fd1b0; }
+html.dark[data-accent="forest"] { --accent: #7fd1b0; --on-accent: #0d1a14; }
+html[data-accent="plum"]        { --accent: #8c3a73; --on-accent: #fff; --accent-bright: #e39ac8; }
+html.dark[data-accent="plum"]   { --accent: #e39ac8; --on-accent: #2a1022; }
+html[data-accent="graphite"]      { --accent: #1c1915; --on-accent: #fff; --accent-bright: #f3eee4; }
+html.dark[data-accent="graphite"] { --accent: #f3eee4; --on-accent: #151310; }
+
 @layer base {
   html {
-    font-family: 'Raleway', sans-serif;
+    font-family: 'Inter', sans-serif;
+    scroll-behavior: smooth;
+    background: var(--bg);
   }
+  body {
+    background: var(--bg);
+    color: var(--fg);
+    -webkit-font-smoothing: antialiased;
+    transition: background 0.4s, color 0.4s;
+  }
+  ::selection { background: var(--accent); color: var(--on-accent); }
+  :focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-radius: 6px; }
+}
+
+@layer components {
+  .section { @apply relative w-full px-6 md:px-16 py-20 md:py-28 mx-auto max-w-6xl; }
+  .eyebrow { @apply font-mono text-xs uppercase tracking-[0.2em]; color: var(--muted); }
+  .eyebrow b { color: var(--accent); font-weight: 500; }
+  .section-title { @apply font-display text-5xl md:text-6xl font-medium tracking-tight mt-3; }
+  .muted { color: var(--muted); }
+  .accent-em { font-style: italic; color: var(--accent); }
+  .card { background: var(--surface); border: 1px solid var(--border); border-radius: 1.25rem; }
+  .lift { transition: transform .25s ease, border-color .25s ease, box-shadow .25s ease; will-change: transform; }
+  .lift:hover { border-color: var(--accent); box-shadow: 0 14px 40px -22px var(--accent); }
+  .btn { @apply inline-flex items-center gap-2 px-6 py-3 rounded-full font-medium text-sm transition duration-300; }
+  .btn-primary { background: var(--accent); color: var(--on-accent); }
+  .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 12px 28px -12px var(--accent); }
+  .btn-ghost { border: 1px solid var(--border); background: transparent; }
+  .btn-ghost:hover { border-color: var(--fg); transform: translateY(-2px); }
+  .chip {
+    @apply inline-flex items-center gap-2 text-xs px-3 py-1.5 rounded-full;
+    border: 1px solid var(--border); color: var(--fg); background: var(--surface);
+  }
+  .chip svg { color: var(--muted); transition: color .2s; }
+  .chip:hover { border-color: var(--accent); }
+  .chip:hover svg { color: var(--accent); }
+}
+
+/* Paper grain over everything (very subtle) */
+body::before {
+  content: ""; position: fixed; inset: 0; z-index: 90; pointer-events: none; opacity: .06; mix-blend-mode: multiply;
+  background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='160' height='160'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.8' numOctaves='2' stitchTiles='stitch'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>");
+}
+html.dark body::before { mix-blend-mode: screen; opacity: .045; }
+
+/* ---------- Scroll reveal ---------- */
+.reveal { opacity: 0; transform: translateY(24px); transition: opacity .8s cubic-bezier(.2,.7,.2,1), transform .8s cubic-bezier(.2,.7,.2,1); transition-delay: var(--d, 0ms); }
+.reveal.in { opacity: 1; transform: none; }
+.reveal.done { transition: transform .18s ease-out, opacity .3s, border-color .25s, box-shadow .25s; transition-delay: 0s; }
+
+/* ---------- Staggered pop ---------- */
+.reveal:not(.in) .pop { opacity: 0; }
+.reveal.in .pop { animation: pop .55s cubic-bezier(.2,.8,.2,1) backwards; animation-delay: calc(var(--i, 0) * 40ms); }
+@keyframes pop { from { opacity: 0; transform: translateY(14px) scale(.92); } }
+
+/* ---------- Hero bits ---------- */
+.arch { border-radius: 999px 999px 1.5rem 1.5rem; }
+.arch-frame { position: relative; }
+.arch-frame::before {
+  content: ""; position: absolute; inset: 0; transform: translate(14px, 14px);
+  border: 1.5px solid var(--accent); border-radius: 999px 999px 1.5rem 1.5rem;
+}
+.spin-slow { animation: spin 22s linear infinite; }
+.caret::after { content: ""; display: inline-block; width: 8px; height: 1.05em; margin-left: 3px; vertical-align: -.15em; background: var(--accent); animation: blink 1s steps(1) infinite; }
+
+/* ---------- Experience timeline ---------- */
+.rail { position: relative; }
+.rail::before { content: ""; position: absolute; left: 5px; top: 10px; bottom: -40px; width: 1px; background: var(--border); }
+.rail-dot { position: absolute; left: 0; top: 10px; width: 11px; height: 11px; border-radius: 50%; background: var(--accent); box-shadow: 0 0 0 5px color-mix(in srgb, var(--accent) 14%, transparent); }
+
+@keyframes spin { to { transform: rotate(360deg); } }
+@keyframes float { 50% { transform: translateY(-10px); } }
+@keyframes blink { 50% { opacity: 0; } }
+@keyframes pulse-ring { 0% { box-shadow: 0 0 0 0 var(--accent); } 100% { box-shadow: 0 0 0 20px transparent; } }
+.pulse-ring { animation: pulse-ring 2.4s ease-out infinite; }
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation: none !important; transition: none !important; scroll-behavior: auto !important; }
+  .reveal { opacity: 1; transform: none; }
 }

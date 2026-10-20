@@ -1,86 +1,129 @@
-import React, { useState } from "react";
-import { FaBars, FaTimes } from "react-icons/fa";
+import React, { useEffect, useState } from "react";
+import { FaBars, FaTimes, FaSun, FaMoon } from "react-icons/fa";
 import { Link } from "react-scroll";
+import AccentPicker from "./AccentPicker";
+
+const links = [
+  { id: 1, link: "home" },
+  { id: 2, link: "about" },
+  { id: 3, link: "education" },
+  { id: 4, link: "experience" },
+  { id: 5, link: "project" },
+  { id: 6, link: "technologies" },
+  { id: 7, link: "contact" },
+];
 
 const NavBar = () => {
   const [nav, setNav] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+  const [dark, setDark] = useState(() => localStorage.getItem("theme") === "dark");
 
-  const links = [
-    {
-      id: 1,
-      link: "home",
-    },
-    {
-      id: 2,
-      link: "about",
-    },
-    {
-      id: 3,
-      link: "education",
-    },
-    {
-      id: 4,
-      link: "experience",
-    },
-    {
-      id: 5,
-      link: "project",
-    },
-    {
-      id: 6,
-      link: "technologies",
-    },
-    {
-      id: 7,
-      link: "contact",
-    },
-  ];
+  useEffect(() => {
+    document.documentElement.classList.toggle("dark", dark);
+    localStorage.setItem("theme", dark ? "dark" : "light");
+    document
+      .querySelector('meta[name="theme-color"]')
+      ?.setAttribute("content", dark ? "#151310" : "#f4efe6");
+  }, [dark]);
+
+  useEffect(() => {
+    const toggle = () => setDark((d) => !d);
+    window.addEventListener("toggle-theme", toggle);
+    return () => window.removeEventListener("toggle-theme", toggle);
+  }, []);
+
+  useEffect(() => {
+    const onScroll = () => setScrolled(window.scrollY > 24);
+    onScroll();
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
+
   return (
-    <div className="flex justify-between items-center w-full z-10 p-4 text-white bg-black fixed">
-      <div>
-        <h1 className="text-2xl ml-2">Dipali Makadia</h1>
-      </div>
+    <header
+      className="fixed top-0 inset-x-0 z-50 transition-all duration-300"
+      style={{
+        background: scrolled ? "color-mix(in srgb, var(--bg) 82%, transparent)" : "transparent",
+        backdropFilter: scrolled ? "blur(12px)" : "none",
+        borderBottom: `1px solid ${scrolled ? "var(--border)" : "transparent"}`,
+      }}
+    >
+      <nav className="flex justify-between items-center w-full max-w-6xl mx-auto px-6 md:px-16 py-4">
+        <h1 className="font-display text-xl font-medium tracking-tight whitespace-nowrap">
+          Dipali <span className="accent-em">Makadia</span>
+        </h1>
 
-      <ul className="hidden md:flex">
-        {links.map(({ id, link }) => (
-          <li
-            key={id}
-            className="px-4 cursor-pointer capitalize font-medium text-gray-500 hover:scale-105 duration-200"
-          >
-            <Link to={link} smooth duration={500}>
-              {link}
-            </Link>
-          </li>
-        ))}
-      </ul>
-
-      <div
-        onClick={() => setNav(!nav)}
-        className="cursor-pointer pr-4 z-10 text-gray-500 md:hidden"
-      >
-        {nav ? <FaTimes size={30} /> : <FaBars size={30} />}
-      </div>
-
-      {nav && (
-        <ul className="flex flex-col justify-center items-center absolute top-0 left-0 w-full h-screen bg-gradient-to-b from-black to-gray-800 text-gray-500">
+        <ul className="hidden lg:flex items-center gap-1">
           {links.map(({ id, link }) => (
-            <li
-              key={id}
-              className="px-4 cursor-pointer capitalize py-6 text-4xl"
-            >
+            <li key={id}>
               <Link
-                onClick={() => setNav(!nav)}
                 to={link}
                 smooth
+                spy
+                offset={-90}
                 duration={500}
+                activeClass="!text-[var(--accent)]"
+                className="block px-3 py-2 cursor-pointer lowercase font-mono text-xs muted hover:text-[var(--fg)] transition"
               >
-                {link}
+                {link === "project" ? "projects" : link}
+              </Link>
+            </li>
+          ))}
+        </ul>
+
+        <div className="flex items-center gap-3">
+          <AccentPicker className="hidden lg:flex" />
+          <button
+            onClick={() => window.dispatchEvent(new Event("open-palette"))}
+            aria-label="Open command palette"
+            className="hidden xl:flex items-center whitespace-nowrap text-xs font-mono muted px-3 h-9 rounded-full hover:text-[var(--fg)]"
+            style={{ border: "1px solid var(--border)" }}
+          >
+            Ctrl K
+          </button>
+          <button
+            onClick={() => setDark(!dark)}
+            aria-label={dark ? "Switch to light mode" : "Switch to dark mode"}
+            className="w-9 h-9 rounded-full grid place-items-center hover:text-[var(--accent)]"
+            style={{ border: "1px solid var(--border)" }}
+          >
+            {dark ? <FaSun size={14} /> : <FaMoon size={14} />}
+          </button>
+          <button
+            onClick={() => setNav(!nav)}
+            aria-label="Toggle menu"
+            className="lg:hidden w-9 h-9 grid place-items-center z-[70]"
+          >
+            {nav ? <FaTimes size={20} /> : <FaBars size={20} />}
+          </button>
+        </div>
+      </nav>
+
+      {nav && (
+        <ul
+          className="lg:hidden fixed inset-0 z-[65] flex flex-col justify-center items-center"
+          style={{ background: "var(--bg)" }}
+        >
+          <li className="pb-6">
+            <AccentPicker />
+          </li>
+          {links.map(({ id, link }) => (
+            <li key={id} className="py-3">
+              <Link
+                onClick={() => setNav(false)}
+                to={link}
+                smooth
+                offset={-90}
+                duration={500}
+                className="font-display text-4xl capitalize cursor-pointer hover:text-[var(--accent)]"
+              >
+                {link === "project" ? "projects" : link}
               </Link>
             </li>
           ))}
         </ul>
       )}
-    </div>
+    </header>
   );
 };
 

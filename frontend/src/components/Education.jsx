@@ -1,4 +1,16 @@
 import React from "react";
+import Reveal from "./Reveal";
+
+const certifications = [
+  { name: "A Hands-On Introduction to Hugging Face for Developers", date: "Jan 2026" },
+  { name: "Generative AI: Introduction to Large Language Models", date: "Apr 2024" },
+  { name: "Prompt Engineering: How to Talk to the AIs", date: "Apr 2024" },
+  { name: "Introduction to Prompt Engineering for Generative AI", date: "Dec 2023" },
+  { name: "Programming Foundations: Data Structures", date: "Sep 2023" },
+  { name: "Machine Learning with Python: Foundations", date: "Jul 2023" },
+  { name: "Python Essential Training", date: "Jun 2023" },
+  { name: "JavaScript Essential Training", date: "Nov 2020" },
+];
 
 const Education = () => {
   const education = [
@@ -23,41 +35,49 @@ const Education = () => {
   ];
 
   return (
-    <div
-      name="education"
-      className="bg-black w-full text-white pt-10"
-    >
-      <div className="md:px-20 px-10 mx-auto flex flex-col justify-center w-full">
-        <div>
-          <p className="text-4xl font-bold inline border-b-4 border-gray-500">
-            Education
-          </p>
-          <p className="py-6 text-gray-500">Universities from where I gain knowledge</p>
-        </div>
+    <div name="education" className="w-full">
+      <div className="section">
+        <Reveal>
+          <p className="eyebrow"><b>02</b> / Learning</p>
+          <h3 className="section-title">Education</h3>
+          <p className="muted pt-4">Universities from where I gain knowledge</p>
+        </Reveal>
 
-        <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-8 px-12 sm:px-0">
-          {education.map(({ id, uniname, degree, GPA }) => (
-            <div key={id} className="shadow-md bg-slate-700 shadow-gray-500 px-5 rounded-lg">
-              <div className='rounded-md font-bold text-white-500 duration-200 hover:scale-105 text-center py-4'>
-                {degree}
-              </div>
-              <div className="flex items-center justify-center">
-                <div className='rounded-md w-1/2 text-white-600 font-bold text-center'>
-                  University:
-                </div>
-                <div className='rounded-md w-1/2 text-white-600 duration-200 hover:scale-105 text-center'>
-                  {uniname}
-                </div>
-              </div>
-              <div className="flex items-center justify-center py-2">
-                <div className="w-1/2 text-center text-white-600 font-bold">GPA:</div>
-                <div className="w-1/2 text-center text-white-600 duration-200 hover:scale-105">
-                  {GPA}
-                </div>
-              </div>
-            </div>
+        <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-5 mt-10">
+          {education.map(({ id, uniname, degree, GPA }, i) => (
+            <Reveal key={id} delay={i * 120} className="card lift p-7 flex flex-col">
+              <span className="font-display text-5xl accent-em">{String(id).padStart(2, "0")}</span>
+              <h4 className="font-display text-xl font-medium leading-snug mt-5">{degree}</h4>
+              <p className="mt-4 text-sm">
+                <span className="muted">University: </span>
+                {uniname}
+              </p>
+              <p className="mt-auto pt-6 font-mono text-sm">
+                <span className="muted">GPA: </span>
+                <span style={{ color: "var(--accent)" }}>{GPA}</span>
+              </p>
+            </Reveal>
           ))}
         </div>
+
+        <Reveal className="mt-16">
+          <h4 className="font-display text-2xl md:text-3xl font-medium">Certifications</h4>
+          <p className="muted pt-2 text-sm">Certificates of completion from LinkedIn Learning</p>
+          <div className="grid sm:grid-cols-2 gap-4 mt-6">
+            {certifications.map(({ name, date }) => (
+              <a
+                key={name}
+                href="https://www.linkedin.com/in/dipali-makadia/details/certifications/"
+                target="_blank"
+                rel="noreferrer"
+                className="card lift p-5 flex items-start justify-between gap-4"
+              >
+                <span className="leading-snug">{name}</span>
+                <span className="font-mono text-xs muted whitespace-nowrap pt-1">{date}</span>
+              </a>
+            ))}
+          </div>
+        </Reveal>
       </div>
     </div>
   );

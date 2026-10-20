@@ -9,7 +9,7 @@ function renderMessage(content) {
     text
       .replace(
         /\[([^\]]+)\]\((https?:\/\/[^\s)]+)\)/g,
-        `<a href="$2" target="_blank" rel="noopener noreferrer" class="text-blue-600 underline">$1</a>`,
+        `<a href="$2" target="_blank" rel="noopener noreferrer" class="underline" style="color:var(--accent)">$1</a>`,
       )
       .replace(/\*\*(.*?)\*\*/g, "<strong>$1</strong>")
       .replace(/\*(.*?)\*/g, "<em>$1</em>");
@@ -61,6 +61,19 @@ function addEmojiToAnswer(answer) {
 }
 
 
+// Used when the AI server cannot be reached, so the basics still work.
+function localAnswer(q) {
+  const t = q.toLowerCase();
+  if (t.includes("linkedin")) return "[LinkedIn](https://www.linkedin.com/in/dipali-makadia/)";
+  if (t.includes("github")) return "[GitHub](https://github.com/dipalimakadia)";
+  if (t.includes("relocat")) return "Dipali is open to relocate anywhere in the US.";
+  if (t.includes("contact") || t.includes("reach"))
+    return "Phone: 562-825-8686\n[LinkedIn](https://www.linkedin.com/in/dipali-makadia/)\n[GitHub](https://github.com/dipalimakadia)";
+  if (t.includes("skill") || t.includes("tech"))
+    return "Dipali works mostly with React, Redux, TypeScript, Node.js, Python, FastAPI, AWS and Google Cloud, plus Gemini/LLM tooling. See the Technologies section above!";
+  return "My AI brain is resting right now 😴. Meanwhile, explore the sections above, press **Ctrl+K**, or reach Dipali on [LinkedIn](https://www.linkedin.com/in/dipali-makadia/).";
+}
+
 export default function Chatbot() {
   const welcomeMessages = [
     "Light's on! I'm SparkaraNeo 🌟, your portfolio guide. Curious about Dipali’s skills, projects, or experience? Let's explore together!",
@@ -98,6 +111,12 @@ export default function Chatbot() {
   ];
 
   useEffect(() => {
+    const openChat = () => setOpen(true);
+    window.addEventListener("open-chat", openChat);
+    return () => window.removeEventListener("open-chat", openChat);
+  }, []);
+
+  useEffect(() => {
     messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
       }, [messages]);
 
@@ -122,10 +141,11 @@ export default function Chatbot() {
     try {
       const backendURL =
         process.env.NODE_ENV === "production"
-          ? "https://dipali-s-portfolio-production.up.railway.app/ask"
-          : "http://localhost:5000/ask";
+          ? process.env.REACT_APP_CHAT_URL
+          : process.env.REACT_APP_CHAT_URL || "http://localhost:8000/ask";
 
-      const res = await axios.post(backendURL, { question: text });
+      if (!backendURL) throw new Error("chat backend not configured");
+      const res = await axios.post(backendURL, { question: text }, { timeout: 30000 });
 
       if (res.data?.status === "offline") {
         setConnectionStatus("offline");
@@ -153,7 +173,7 @@ export default function Chatbot() {
         ...prev,
         {
           role: "bot",
-          content: "⚠️ Sorry, something went wrong.",
+          content: localAnswer(text),
           time: new Date().toLocaleTimeString([], {
             hour: "2-digit",
             minute: "2-digit",
@@ -169,7 +189,9 @@ export default function Chatbot() {
     <div className="fixed bottom-5 right-5 z-50">
       {!open && (
         <button
-          className="w-14 h-14 rounded-full bg-slate-700 text-white flex items-center justify-center shadow-lg"
+          className="pulse-ring w-14 h-14 rounded-full text-[var(--on-accent)] flex items-center justify-center shadow-lg hover:scale-110 transition"
+          style={{ background: "var(--accent)" }}
+          aria-label="Chat with SparkaraNeo"
           onClick={() => setOpen(true)}
         >
           <FaComments size={26} />
@@ -177,9 +199,9 @@ export default function Chatbot() {
       )}
 
       {open && (
-        <div className="w-96 max-h-[80vh] bg-white rounded-xl shadow-xl flex flex-col overflow-hidden">
+        <div className="w-[calc(100vw-2.5rem)] sm:w-96 max-h-[80vh] bg-[var(--surface)] text-[var(--fg)] border border-[var(--border)] rounded-2xl shadow-xl flex flex-col overflow-hidden">
           {/* Header */}
-          <div className="bg-slate-700 text-white p-4 flex justify-between items-center flex-shrink-0">
+          <div className="text-[var(--on-accent)] p-4 flex justify-between items-center flex-shrink-0" style={{ background: "var(--accent)" }}>
             <div>
               <div className="font-semibold text-lg">SparkaraNeo</div>
               <div className="text-sm flex items-center gap-2">
@@ -199,7 +221,7 @@ export default function Chatbot() {
           </div>
 
           {/* Messages */}
-          <div className="flex-1 overflow-y-auto overflow-x-hidden p-4 space-y-4 bg-gray-50">
+          <div className="flex-1 overflow-y-auto overflow-x-hidden p-4 space-y-4 bg-[var(--bg-soft)]">
             {messages.map((msg, i) => (
               <div
                 key={i}
@@ -208,7 +230,7 @@ export default function Chatbot() {
                 }`}
               >
                 {msg.role === "bot" && (
-                  <div className="w-8 h-8 bg-slate-700 text-white rounded-full flex items-center justify-center flex-shrink-0">
+                  <div className="w-8 h-8 bg-[var(--accent)] text-[var(--on-accent)] rounded-full flex items-center justify-center flex-shrink-0">
                     <FaRobot size={14} />
                   </div>
                 )}
@@ -217,15 +239,15 @@ export default function Chatbot() {
                   <div
                     className={`p-3 rounded-xl break-words ${
                       msg.role === "bot"
-                        ? "bg-gray-100 text-gray-900"
-                        : "bg-slate-700 text-white"
+                        ? "bg-[var(--surface)] text-[var(--fg)] border border-[var(--border)]"
+                        : "bg-[var(--accent)] text-[var(--on-accent)]"
                     }`}
                   >
                     {msg.role === "bot"
                       ? renderMessage(msg.content)
                       : msg.content}
                   </div>
-                  <div className="text-xs text-gray-400 mt-1">{msg.time}</div>
+                  <div className="text-xs muted mt-1">{msg.time}</div>
                 </div>
               </div>
             ))}
@@ -234,12 +256,12 @@ export default function Chatbot() {
 
           {/* Quick Actions — on landing */}
           {messages.length === 1 && (
-            <div className="p-3 flex flex-wrap gap-2 border-t">
+            <div className="p-3 flex flex-wrap gap-2 border-t border-[var(--border)]">
               {quickActions.map((q) => (
                 <button
                   key={q}
                   onClick={() => sendMessage(q)}
-                  className="px-3 py-1 border border-slate-700 text-slate-700 rounded-full text-sm hover:bg-slate-700 hover:text-white transition"
+                  className="px-3 py-1 border border-[var(--accent)] text-[var(--accent)] rounded-full text-sm hover:bg-[var(--accent)] hover:text-[var(--on-accent)] transition"
                 >
                   {q}
                 </button>
@@ -248,19 +270,19 @@ export default function Chatbot() {
           )}
 
           {/* Input */}
-          <div className="p-3 flex items-center gap-2 border-t flex-shrink-0">
+          <div className="p-3 flex items-center gap-2 border-t border-[var(--border)] flex-shrink-0">
             <input
               value={input}
               onChange={(e) => setInput(e.target.value)}
               onKeyDown={(e) => e.key === "Enter" && sendMessage()}
               placeholder="Type a message..."
-              className="flex-1 px-4 py-2 rounded-full border focus:outline-none"
+              className="flex-1 px-4 py-2 rounded-full border bg-transparent border-[var(--border)] focus:border-[var(--accent)] focus:outline-none"
               disabled={loading}
             />
             <button
               onClick={() => sendMessage()}
               disabled={!input.trim() || loading}
-              className="w-10 h-10 rounded-full bg-slate-700 text-white flex items-center justify-center disabled:opacity-40"
+              className="w-10 h-10 rounded-full bg-[var(--accent)] text-[var(--on-accent)] flex items-center justify-center disabled:opacity-40"
             >
               <FaPaperPlane size={14} />
             </button>

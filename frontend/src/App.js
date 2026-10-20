@@ -6,12 +6,15 @@ import Technologies from "./components/Technologies";
 import Experience from "./components/Experience";
 import Contact from "./components/Contact";
 import Education from "./components/Education";
-import Project from "./components/RecentProject";
+import Project from "./components/Projects";
 import Chatbot from "./components/Chatbot";
+import Backdrop from "./components/Backdrop";
+import CommandPalette from "./components/CommandPalette";
 
 function App() {
   return (
     <div>
+      <Backdrop />
       <NavBar />
       <Home />
       <SocialLinks />
@@ -22,6 +25,7 @@ function App() {
       <Technologies />
       <Contact />
       <Chatbot />
+      <CommandPalette />
     </div>
   );
 }

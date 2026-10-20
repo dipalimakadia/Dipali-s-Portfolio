@@ -1,122 +1,70 @@
 import React from "react";
-import { MdOutlineArrowCircleRight } from "react-icons/md";
+import { FiArrowUpRight } from "react-icons/fi";
+import Reveal from "./Reveal";
+import CompanyLogo from "./CompanyLogo";
+import { experiences } from "../data/experiences";
 
 const Experience = () => {
-  const experiences = [
-    {
-      id: 1,
-      position: "Software Developer",
-      company: "Tesla",
-      year: "06/2025 – present",
-      details:
-        "Developed and maintained React Energy Product Profile (Tesla Account), a customer-facing portal for Tesla Energy customers to manage their solar panel, solar roof, and Powerwall orders. Built with React, Redux, Visx, Router, Tesla Design System, Axios, GIT and Testing Library.",
-      otherprojectdetails: "Built and enhanced Incentives UI, an internal administrative dashboard. Developed features for flat-rate incentives, battery/solar size–based incentives, and geographic filtering. Implemented secure ADFS OAuth authentication with JWT, React, Router, TypeScript, Node.js, Nodemon, and Express.js backend APIs. The tool directly supported customer pricing accuracy, compliance, and sales team efficiency.",
-      link: "https://www.tesla.com/",
-    },
-    {
-      id: 2,
-      position: "Artificial Intelligence Intern",
-      company: "Reality AI Labs",
-      year: "06/2024 – 05/2025",
-      details:
-        "Contributing to the development of 'Kai Project' by developing and deploying AI applications using industry-leading frameworks such as Google Gemini. Engaging in prompt engineering to refine interactions with AI models, ensuring clarity and relevance in responses. Utilizing technologies like Gemini AI and Vertex AI to enhance predictive features. Employing Docker, Fast API, Python, Google Cloud for development and GIT for version control to support smooth collaboration.",
-      otherprojectdetails: "",
-      link: "https://lab.radicalai.app/",
-    },
-    {
-      id: 3,
-      position: "Graduate Student Assistant at Graduate Resource Center",
-      company: "California State University, Los Angeles",
-      year: "03/2022 – 12/2023",
-      details:
-        "Scheduled individual Zoom meetings with students to discuss their thesis formatting, including referencing styles, citations, and bibliographies.",
-      otherprojectdetails: "",
-      link: "https://www.calstatela.edu/",
-    },
-    {
-      id: 4,
-      position: "Programmer Analyst",
-      company: "Cognizant",
-      year: "05/2021 – 01/2022",
-      details:
-        "Collaborated on the O2 project, utilizing HTML5, CSS, Bootstrap, JIRA, NodeJs, ES6, JavaScript, jQuery, Adobe Target, React, React Hooks, Redux, Axios and GIT to develop engaging and responsive website.",
-      otherprojectdetails: "",
-      link: "https://www.cognizant.com/in/en",
-    },
-    {
-      id: 5,
-      position: "Associate Interface Developer",
-      company: "Digitas",
-      year: "05/2019 – 05/2021",
-      details:
-       "Programmed DMI website with team, using HTML5, CSS3, Highcharts, D3, GIT, Handlebars, NPM, JavaScript, ES6, jQuery, SCSS, ReactJS, React Hooks, Redux, Nodejs, Axios and AOS library to develop visually appealing and interactive graphs.",
-      otherprojectdetails:
-        "Expanded Formula1 by implementing tracking code and set up data filters using Google Analytics and Jquery. Explored new concepts through research using Google Cloud and Nodejs.",
-      link: "https://www.digitas.com/en-us",
-    },
-    {
-      id: 6,
-      position: "Software Developer",
-      company: "Motes & Bots Technologies",
-      year: "07/2018 – 02/2019",
-      details:
-        "Led the team on the Smart Office Project to develop a secure and user-friendly website for office management, utilizing ReactJS, Redux Firebase, NodeJS, HTML5, CSS, Bootstrap, and AWS. Features like user authentication and authorization was established, CRUD operations for employee data, and created modules for office management.",
-      otherprojectdetails: "Participated in the Smart Home application to create a safe and easy-to-use dashboard for home management, using the latest technologies like Angular, Firebase, NodeJS, HTML5, CSS, Bootstrap, and AWS. Gained knowledge of new technologies and implemented software development lifecycle, including the analysis, coding, building, testing, and deployment.",
-      link: "",
-    },
-    {
-      id: 7,
-      position: "Software Developer Intern",
-      company: "Textron",
-      year: "07/2017 – 06/2018",
-      details:
-        "Contributed significantly to the team’s effort on the Request Tracker website using C#, .NET Framework, HTML, CSS, and SQL Server. As a business requirement, designed dashboard for tracking requests, CRUD operations, featuring a user-friendly interface using HTML and CSS, and back-end functionality in C#. Conducted testing, and collaborated with the project team and bug fixes.",
-      otherprojectdetails: "",
-      link: "https://www.textron.com/",
-    },
-  ];
-
   return (
-    <div name="experience" className=" w-full bg-black text-white pt-10">
-      <div className="md:px-20 px-10 mx-auto flex flex-col justify-center w-full">
-        <div>
-          <p className="text-4xl font-bold inline border-b-4 border-gray-500">
-            Experience
-          </p>
-          <p className="py-6 text-gray-500 text-justify">
+    <div name="experience" className="w-full">
+      <div className="section">
+        <Reveal>
+          <p className="eyebrow"><b>03</b> / Career</p>
+          <h3 className="section-title">Experience</h3>
+          <p className="muted pt-4">
             Places where I implemented my knowledge and learned new Technologies.
           </p>
-        </div>
+        </Reveal>
 
-        <div className="sm:px-0">
+        <div className="mt-14 space-y-14">
           {experiences.map(
-            ({ id, position, company, year, place, details, otherprojectdetails, link }) => (
-              <div
-                key={id}
-                className="shadow-lg shadow-slate-400 my-5 p-3 rounded-lg"
-              >
-                <div className="rounded-md text-2xl text-white-600 font-bold">
-                  {position}
-                </div>
-                <div className="rounded-md text-xl text-white-500 pb-2">
-                  {company}
-                </div>
-                <div className="rounded-md text-sm text-white-400">{year}</div>
-                <div className="rounded-md text-sm text-white-400">{place}</div>
-                <div className="rounded-md text-white-600 pt-4 text-justify">{details}</div>
-                <div className="rounded-md text-white-600 pt-4 text-justify">{otherprojectdetails}</div>
-                <div>
-                  <a href={link} target="_blank">
-                    <span className="group-hover:rotate-90 duration-300">
-                      <MdOutlineArrowCircleRight
-                        size={50}
-                        className="ml-1 mt-5"
-                      />
-                    </span>
-                  </a>
-                </div>
-              </div>
-            )
+            (exp) => {
+              const { id, position, company, year, details, link, logo } = exp;
+              // details is project 1; projectdetail1, projectdetail2, ... follow in order
+              const extra = Object.keys(exp)
+                .filter((k) => /^projectdetail\d+$/.test(k))
+                .sort((a, b) => parseInt(a.slice(13), 10) - parseInt(b.slice(13), 10))
+                .map((k) => exp[k]);
+              const projects = [details, exp.otherprojectdetails, ...extra].filter(Boolean);
+              return (
+                <Reveal key={id} className="rail pl-9">
+                  <span className="rail-dot" />
+                  <div className="flex items-start gap-4">
+                    <CompanyLogo name={company} url={link} logo={logo} size={52} />
+                    <div className="flex-1">
+                      <div className="flex flex-wrap items-baseline justify-between gap-x-6 gap-y-1">
+                        <h4 className="font-display text-2xl md:text-3xl font-medium">{position}</h4>
+                        <span className="font-mono text-xs muted">{year}</span>
+                      </div>
+                      <p className="accent-em text-lg md:text-xl font-display mt-1">{company}</p>
+                    </div>
+                  </div>
+
+                  <div className={`mt-5 grid gap-4 ${projects.length === 2 ? "lg:grid-cols-2" : ""}`}>
+                    {projects.map((text, i) => (
+                      <div key={i} className="card lift p-6">
+                        {projects.length > 1 && (
+                          <p className="eyebrow mb-3"><b>Project {i + 1}</b></p>
+                        )}
+                        <p className="leading-relaxed">{text}</p>
+                      </div>
+                    ))}
+                  </div>
+
+                  {link && (
+                    <a
+                      href={link}
+                      target="_blank"
+                      rel="noreferrer"
+                      aria-label={`Visit ${company}`}
+                      className="inline-flex items-center gap-1 mt-4 text-sm font-medium hover:text-[var(--accent)] transition"
+                    >
+                      Visit {company} <FiArrowUpRight />
+                    </a>
+                  )}
+                </Reveal>
+              );
+            }
           )}
         </div>
       </div>
