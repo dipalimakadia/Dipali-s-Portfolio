@@ -100,11 +100,13 @@ export default function Chatbot() {
     "Beam me up! SparkaraNeo reporting for portfolio duty 🚀. Want a tour of Dipali’s work and achievements?",
   ];
 
+  const addFirstMessage = "Server may take a moment to wake up ⏳"
+
   const [messages, setMessages] = useState([
     {
       role: "bot",
       content:
-        welcomeMessages[Math.floor(Math.random() * welcomeMessages.length)],
+        welcomeMessages[Math.floor(Math.random() * welcomeMessages.length)] + "\n" + addFirstMessage,
       time: new Date().toLocaleTimeString([], {
         hour: "2-digit",
         minute: "2-digit",
@@ -167,16 +169,14 @@ export default function Chatbot() {
       } else {
         setConnectionStatus("online");
       }
-      const answer = res.data?.answer;
-      if (typeof answer !== "string" || !answer.trim()) throw new Error("empty answer");
       setMessages((prev) => [
         ...prev,
         {
           role: "bot",
           content:
             res.data?.status === "offline"
-              ? answer
-              : addEmojiToAnswer(answer),
+              ? res.data.answer
+              : addEmojiToAnswer(res.data.answer), 
           time: new Date().toLocaleTimeString([], {
             hour: "2-digit",
             minute: "2-digit",
