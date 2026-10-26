@@ -107,6 +107,10 @@ html.dark body::before { opacity: .045; }
 .spin-slow { animation: spin 22s linear infinite; }
 .caret::after { content: ""; display: inline-block; width: 8px; height: 1.05em; margin-left: 3px; vertical-align: -.15em; background: var(--accent); animation: blink 1s steps(1) infinite; }
 
+/* ---------- Side social tabs: slide out on hover (compositor-only animation) ---------- */
+.social-tab { transform: translate3d(-100px, 0, 0); transition: transform .3s cubic-bezier(.22, 1, .36, 1), border-radius .3s; will-change: transform; }
+.social-tab:hover { transform: translate3d(-10px, 0, 0); border-radius: .375rem; }
+
 /* ---------- Experience timeline ---------- */
 .rail { position: relative; }
 .rail::before { content: ""; position: absolute; left: 5px; top: 10px; bottom: -40px; width: 1px; background: var(--border); }

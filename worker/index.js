@@ -79,7 +79,9 @@ ${FALLBACK_PROMPT}
     ],
     max_tokens: 400,
   });
-  return (result?.response || "").trim();
+  // Workers AI can return an object (or nothing) instead of a string; always hand back text.
+  const out = result?.response ?? result?.choices?.[0]?.message?.content ?? "";
+  return (typeof out === "string" ? out : JSON.stringify(out)).trim();
 }
 
 export default {

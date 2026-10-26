@@ -39,7 +39,14 @@ const NavBar = () => {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
+  // Lock page scroll while the mobile menu is open.
+  useEffect(() => {
+    document.body.style.overflow = nav ? "hidden" : "";
+    return () => { document.body.style.overflow = ""; };
+  }, [nav]);
+
   return (
+    <>
     <header
       className="fixed top-0 inset-x-0 z-50 transition-all duration-300"
       style={{
@@ -98,10 +105,12 @@ const NavBar = () => {
           </button>
         </div>
       </nav>
+    </header>
 
+    {/* Outside <header>: its backdrop-filter would otherwise make "fixed" relative to the header bar. */}
       {nav && (
         <ul
-          className="lg:hidden fixed inset-0 z-[65] flex flex-col justify-center items-center"
+          className="lg:hidden fixed inset-0 z-[45] pt-20 overflow-y-auto flex flex-col justify-center items-center"
           style={{ background: "var(--bg)" }}
         >
           <li className="pb-6">
@@ -123,7 +132,7 @@ const NavBar = () => {
           ))}
         </ul>
       )}
-    </header>
+    </>
   );
 };
 
